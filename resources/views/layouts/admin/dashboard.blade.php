@@ -25,10 +25,7 @@
 
             <!-- Main Content -->
             <div class="main-content">
-                <section class="section">
-                    @yield('main-content')
-
-                </section>
+                @yield('main-content')
             </div>
 
             {{-- start footer --}}

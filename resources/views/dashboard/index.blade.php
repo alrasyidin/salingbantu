@@ -1,6 +1,7 @@
 @extends('layouts.admin.dashboard')
 @section('title','Dashboard')
 @section('main-content')
+<section class="section">
 <div class="section-header">
         <h1>Default Layout</h1>
         <div class="section-header-breadcrumb">
@@ -30,4 +31,5 @@
           </div>
         </div>
       </div>
+</section>
 @endsection
