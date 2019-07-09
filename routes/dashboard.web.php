@@ -7,4 +7,11 @@ Route::group(['prefix' => 'dashboard','middleware' => 'auth','namespace' => 'Das
     Route::view('form-changepassword', 'dashboard.setting-account.changepassword');
     Route::post('changepassword', 'SettingProfileController@changePassword');
 
+    Route::get('campaign', 'CampaignController@index');
+    Route::get('campaign/create/{id?}', 'CampaignController@create')->name('create.campaign');
+    Route::post('campaign/store', 'CampaignController@store')->name('store.campaign');
+    Route::get('campaign/data', 'CampaignController@data');
+    Route::delete('campaign/{id}', 'CampaignController@destroy');
+    Route::post('campaign/delete-image/{id}', 'CampaignController@deleteCampaignImg');
+
 });

@@ -52,6 +52,8 @@
     <script src="{{asset('stisla/assets/js/custom.js')}}"></script>
     <!-- JS Libraies -->
     <script src="{{asset('stisla/assets/modules/sticky-kit.js')}}"></script>
+    <script src="{{asset('js/core.js')}}"></script>
+
     <script>
         var current = location.href;
         $('ul li a').each(function () {

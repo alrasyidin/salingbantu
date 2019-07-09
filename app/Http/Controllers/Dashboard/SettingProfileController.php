@@ -24,7 +24,7 @@ class SettingProfileController extends Controller
             "first_name" => "required|min:2|max:40",
             "last_name"  => "required|min:2|max:40",
             "username"   => "required|min:5|max:40",
-            "bio"        => "min:50|max:225",
+            "bio"        => "min:50|max:1000",
             "email"      => "required|max:30|unique:users,email,$current_id",
         ]);
         
