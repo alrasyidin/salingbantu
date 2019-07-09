@@ -19,5 +19,21 @@ class UserSeeder extends Seeder
             'email'      => 'asditap@gmail.com',
             'password'   =>  bcrypt('hellodit')
         ]);
+
+        User::create([
+            'first_name' => 'Sihabudin',
+            'last_name'  => 'Sholeh',
+            'username'   => 'masholeh',
+            'email'      => 'masholeh@gmail.com',
+            'password'   =>  bcrypt('hellodit')
+        ]);
+
+        User::create([
+            'first_name' => 'codenesia',
+            'last_name'  => 'Sholeh',
+            'username'   => 'codenesia',
+            'email'      => 'codenesia@gmail.com',
+            'password'   =>  bcrypt('hellodit')
+        ]);
     }
 }
