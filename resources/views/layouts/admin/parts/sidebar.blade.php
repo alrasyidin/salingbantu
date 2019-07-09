@@ -8,6 +8,7 @@
         </div>
         <ul class="sidebar-menu">
             <li class="menu-header">Pages</li>
+            <li><a class="nav-link" href="{{url('dashboard/campaign')}}"><i class="fas fa-pencil-ruler"></i> <span>Post Campaign</span></a>
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-ellipsis-h"></i> <span>Utilities</span></a>
                 <ul class="dropdown-menu">
@@ -24,7 +25,6 @@
                     </ul>
                 </li>
 
-            {{-- <li><a class="nav-link" href="{{route('dashboard.setting')}}"><i class="fas fa-pencil-ruler"></i> <span>Pengaturan Akun</span></a> --}}
             </li>
         </ul>
 
@@ -35,3 +35,4 @@
         </div>
     </aside>
 </div>
+
