@@ -19,7 +19,6 @@ class CreateCampaignImagesTable extends Migration
             $table->string('name', 100);
             $table->string('path', 100);
             $table->string('size', 20);
-            $table->string('username');
 
             $table->timestamps();
             $table->foreign('campaign_id')->references('id')->on('campaigns')->onDelete('cascade');

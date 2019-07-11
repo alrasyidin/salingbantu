@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('last_name');
             $table->text('bio')->nullable();
             $table->integer('verified')->default(0);
-            $table->string('avatar')->default('avatar.png');
+            $table->string('avatar');
             $table->string('identity_photo')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
