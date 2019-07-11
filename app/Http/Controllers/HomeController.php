@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Campaign;
 class HomeController extends Controller
 {
     /**
@@ -18,11 +18,14 @@ class HomeController extends Controller
 
     /**
      * Show the application dashboard.
-     *
+     *8888888888888888888888888888888888888888
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
     {
-        return view('app.index');
+        $campaigns = Campaign::where('status','=','published')->with('user','images')->paginate(6);
+        return view('app.index',compact('campaigns'));
     }
+    
+
 }

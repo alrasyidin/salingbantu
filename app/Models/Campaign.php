@@ -22,4 +22,9 @@ class Campaign extends Model
     public function images() {
         return $this->hasMany('App\Models\CampaignImage');
     }
+    
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User');
+    }
 }

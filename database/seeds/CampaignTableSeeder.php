@@ -20,7 +20,7 @@ class CampaignTableSeeder extends Seeder
             App\Models\Campaign::create([
                 'title' => "Example campaign saling bantu ".$i,
                 'user_id' => $user['id'],
-                'goals' => $faker->numberBetween(1000, 10000),
+                'goals' => $faker->numberBetween(10000, 100000000),
                 'slug' => str_slug($faker->name),
                 'endof_campaign' => date("Y/m/d",mktime(0, 0, 0, date('m'), date('d') + 30, date('Y'))),
                 'description' => $faker->randomHtml(2,3),

@@ -19,7 +19,7 @@ class CampaignImage extends Model
 
     protected $guarded = array();
     
-    public function product() {
+    public function campaign() {
         return $this->belongsTo('App\Models\Campaign'); 
     }
 }

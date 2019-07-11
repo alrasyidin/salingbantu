@@ -4,322 +4,51 @@
 
 @include('app.parts.hero')
 @include('app.parts.featured')
-
     <section class="latest-product section--padding">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="section-title">
-                        <h1>Newest Products</h1>
-                        <p>Pellentesque facilisis the ullamcorper sapien interdum magna pellentesque kequis. Phasellus
-                            condimentum eleifend kerat.</p>
+                        <h1>Siap untuk saling membantu?</h1>
+                        <p>Mari bersama membantu saudara kita yang membutuhkan, sedikit bantuan kita sangat berarti bagi saudara kita</p>
                     </div>
                 </div><!-- Ends: .col-md-12 -->
                 <div class="col-lg-12">
                     <div class="product-list">
                             <div class="row">
-                                    <div class="col-lg-4 col-md-6">
+                                @foreach ($campaigns as $campaign)
+                                <div class="col-lg-4 col-md-6">
                                         <div class="product-single latest-single">
                                             <div class="product-thumb">
                                                 <figure>
-                                                    <img src="{{asset('apps/img/product1.png')}}" alt="" class="img-fluid">
+                                                    <img src="{{asset("storage/campaign_images/300/".$campaign->images[0]['path'])}}" alt="" class="img-fluid">
                                                     <figcaption>
                                                         <ul class="list-unstyled">
-                                                            <li><a href=""><span class="icon-basket"></span></a></li>
-                                                            <li><a href="{{url('/detail')}}">Live Demo</a></li>
+                                                            <li><a href="{{url('campaign/'.$campaign->slug)}}">Detail</a></li>
                                                         </ul>
                                                     </figcaption>
                                                 </figure>
                                             </div>
                                             <!-- Ends: .product-thumb -->
                                             <div class="product-excerpt">
-                                                <h5>
-                                                    <a href="">E-commerce Shopping Cart</a>
+                                                <h5 style="min-height:3.9em">
+                                                    <a href="">{{$campaign->title}}</a>
                                                 </h5>
                                                 <ul class="titlebtm">
                                                     <li>
-                                                        <img class="auth-img" src="img/auth-img.png" alt="author image">
-                                                        <p><a href="#">Theme-Valley</a></p>
-                                                    </li>
-                                                    <li class="product_cat">
-                                                        in
-                                                        <a href="#">WordPress</a>
+                                                        <img class="auth-img" src="{{asset("storage/user_photo/60/".$campaign->user->avatar)}}" alt="author image">
+                                                        <p><a href="#">{{$campaign->user->fullname()}}</a></p>
                                                     </li>
                                                 </ul>
                                                 <ul class="product-facts clearfix">
-                                                    <li class="price">$24</li>
-                                                    <li class="sells">
-                                                        <span class="icon-basket"></span>141
-                                                    </li>
-                                                    <li class="product-fav">
-                                                        <span class="icon-heart" title="Add to collection" data-toggle="tooltip"></span>
-                                                    </li>
-                                                    <li class="product-rating">
-                                                        <ul class="list-unstyled">
-                                                            <li><span class="rate_active"></span></li>
-                                                            <li><span class="rate_active"></span></li>
-                                                            <li><span class="rate_active"></span></li>
-                                                            <li><span class="rate_active"></span></li>
-                                                            <li><span class="rate_disabled"></span></li>
-                                                        </ul>
-                                                    </li>
+                                                    <li class="price">{{str_rp($campaign->goals)}}</li>
                                                 </ul>
                                             </div>
                                             <!-- Ends: .product-excerpt -->
                                         </div><!-- Ends: .product-single -->
                                     </div><!-- ends: .col-md-6 -->
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="product-single latest-single">
-                                            <div class="product-thumb">
-                                                <figure>
-                                                        <img src="{{asset('apps/img/product1.png')}}" alt="" class="img-fluid">
-                                                    <figcaption>
-                                                        <ul class="list-unstyled">
-                                                            <li><a href=""><span class="icon-basket"></span></a></li>
-                                                            <li><a href="{{url('/detail')}}">Live Demo</a></li>
-                                                        </ul>
-                                                    </figcaption>
-                                                </figure>
-                                            </div>
-                                            <!-- Ends: .product-thumb -->
-                                            <div class="product-excerpt">
-                                                <h5>
-                                                    <a href="">TheBizz Wordpress Theme</a>
-                                                </h5>
-                                                <ul class="titlebtm">
-                                                    <li>
-                                                        <img class="auth-img" src="img/auth-img2.png" alt="author image">
-                                                        <p><a href="#">Aaazztech</a></p>
-                                                    </li>
-                                                    <li class="product_cat">
-                                                        in
-                                                        <a href="#">Wordpress</a>
-                                                    </li>
-                                                </ul>
-                                                <ul class="product-facts clearfix">
-                                                    <li class="price">$24</li>
-                                                    <li class="sells">
-                                                        <span class="icon-basket"></span>141
-                                                    </li>
-                                                    <li class="product-fav">
-                                                        <span class="icon-heart" title="Add to collection" data-toggle="tooltip"></span>
-                                                    </li>
-                                                    <li class="product-rating">
-                                                        <ul class="list-unstyled">
-                                                            <li><span class="rate_active"></span></li>
-                                                            <li><span class="rate_active"></span></li>
-                                                            <li><span class="rate_active"></span></li>
-                                                            <li><span class="rate_active"></span></li>
-                                                            <li><span class="rate_disabled"></span></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <!-- Ends: .product-excerpt -->
-                                        </div><!-- Ends: .product-single -->
-                                    </div><!-- ends: .col-md-6 -->
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="product-single latest-single">
-                                            <div class="product-thumb">
-                                                <figure>
-                                                    <img src="{{asset('apps/img/product1.png')}}" alt="" class="img-fluid">
-                                                    <figcaption>
-                                                        <ul class="list-unstyled">
-                                                            <li><a href=""><span class="icon-basket"></span></a></li>
-                                                            <li><a href="">Live Demo</a></li>
-                                                        </ul>
-                                                    </figcaption>
-                                                </figure>
-                                            </div>
-                                            <!-- Ends: .product-thumb -->
-                                            <div class="product-excerpt">
-                                                <h5>
-                                                    <a href="">DigiPro EDD Template</a>
-                                                </h5>
-                                                <ul class="titlebtm">
-                                                    <li>
-                                                        <img class="auth-img" src="img/auth-img3.png" alt="author image">
-                                                        <p><a href="#">EchoTheme</a></p>
-                                                    </li>
-                                                    <li class="product_cat">
-                                                        in
-                                                        <a href="#">HTML</a>
-                                                    </li>
-                                                </ul>
-                                                <ul class="product-facts clearfix">
-                                                    <li class="price">$24</li>
-                                                    <li class="sells">
-                                                        <span class="icon-basket"></span>141
-                                                    </li>
-                                                    <li class="product-fav">
-                                                        <span class="icon-heart" title="Add to collection" data-toggle="tooltip"></span>
-                                                    </li>
-                                                    <li class="product-rating">
-                                                        <ul class="list-unstyled">
-                                                            <li><span class="rate_active"></span></li>
-                                                            <li><span class="rate_active"></span></li>
-                                                            <li><span class="rate_active"></span></li>
-                                                            <li><span class="rate_active"></span></li>
-                                                            <li><span class="rate_disabled"></span></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <!-- Ends: .product-excerpt -->
-                                        </div><!-- Ends: .product-single -->
-                                    </div><!-- ends: .col-md-6 -->
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="product-single latest-single">
-                                            <div class="product-thumb">
-                                                <figure>
-                                                    <img src="{{asset('apps/img/product1.png')}}" alt="" class="img-fluid">
-                                                    <figcaption>
-                                                        <ul class="list-unstyled">
-                                                            <li><a href=""><span class="icon-basket"></span></a></li>
-                                                            <li><a href="">Live Demo</a></li>
-                                                        </ul>
-                                                    </figcaption>
-                                                </figure>
-                                            </div>
-                                            <!-- Ends: .product-thumb -->
-                                            <div class="product-excerpt">
-                                                <h5>
-                                                    <a href="">AppPress PSD Template</a>
-                                                </h5>
-                                                <ul class="titlebtm">
-                                                    <li>
-                                                        <img class="auth-img" src="img/auth-img3.png" alt="author image">
-                                                        <p><a href="#">Theme-Valley</a></p>
-                                                    </li>
-                                                    <li class="product_cat">
-                                                        in
-                                                        <a href="#">PSD</a>
-                                                    </li>
-                                                </ul>
-                                                <ul class="product-facts clearfix">
-                                                    <li class="price">$24</li>
-                                                    <li class="sells">
-                                                        <span class="icon-basket"></span>141
-                                                    </li>
-                                                    <li class="product-fav">
-                                                        <span class="icon-heart" title="Add to collection" data-toggle="tooltip"></span>
-                                                    </li>
-                                                    <li class="product-rating">
-                                                        <ul class="list-unstyled">
-                                                            <li><span class="rate_active"></span></li>
-                                                            <li><span class="rate_active"></span></li>
-                                                            <li><span class="rate_active"></span></li>
-                                                            <li><span class="rate_active"></span></li>
-                                                            <li><span class="rate_disabled"></span></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <!-- Ends: .product-excerpt -->
-                                        </div><!-- Ends: .product-single -->
-                                    </div><!-- ends: .col-md-6 -->
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="product-single latest-single">
-                                            <div class="product-thumb">
-                                                <figure>
-                                                    <img src="{{asset('apps/img/product1.png')}}" alt="" class="img-fluid">
-                                                    <figcaption>
-                                                        <ul class="list-unstyled">
-                                                            <li><a href=""><span class="icon-basket"></span></a></li>
-                                                            <li><a href="">Live Demo</a></li>
-                                                        </ul>
-                                                    </figcaption>
-                                                </figure>
-                                            </div>
-                                            <!-- Ends: .product-thumb -->
-                                            <div class="product-excerpt">
-                                                <h5>
-                                                    <a href="">Rida Wordpress Theme</a>
-                                                </h5>
-                                                <ul class="titlebtm">
-                                                    <li>
-                                                        <img class="auth-img" src="img/auth-img.png" alt="author image">
-                                                        <p><a href="#">Theme-Valley</a></p>
-                                                    </li>
-                                                    <li class="product_cat">
-                                                        in
-                                                        <a href="#">Wordpress</a>
-                                                    </li>
-                                                </ul>
-                                                <ul class="product-facts clearfix">
-                                                    <li class="price">$24</li>
-                                                    <li class="sells">
-                                                        <span class="icon-basket"></span>141
-                                                    </li>
-                                                    <li class="product-fav">
-                                                        <span class="icon-heart" title="Add to collection" data-toggle="tooltip"></span>
-                                                    </li>
-                                                    <li class="product-rating">
-                                                        <ul class="list-unstyled">
-                                                            <li><span class="rate_active"></span></li>
-                                                            <li><span class="rate_active"></span></li>
-                                                            <li><span class="rate_active"></span></li>
-                                                            <li><span class="rate_active"></span></li>
-                                                            <li><span class="rate_disabled"></span></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <!-- Ends: .product-excerpt -->
-                                        </div><!-- Ends: .product-single -->
-                                    </div><!-- ends: .col-md-6 -->
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="product-single latest-single">
-                                            <div class="product-thumb">
-                                                <figure>
-                                                    <img src="{{asset('apps/img/product1.png')}}" alt="" class="img-fluid">
-                                                    <figcaption>
-                                                        <ul class="list-unstyled">
-                                                            <li><a href=""><span class="icon-basket"></span></a></li>
-                                                            <li><a href="">Live Demo</a></li>
-                                                        </ul>
-                                                    </figcaption>
-                                                </figure>
-                                            </div>
-                                            <!-- Ends: .product-thumb -->
-                                            <div class="product-excerpt">
-                                                <h5>
-                                                    <a href="">TableGen Wordpress Plugin</a>
-                                                </h5>
-                                                <ul class="titlebtm">
-                                                    <li>
-                                                        <img class="auth-img" src="img/auth-img3.png" alt="author image">
-                                                        <p><a href="#">Theme-Valley</a></p>
-                                                    </li>
-                                                    <li class="product_cat">
-                                                        in
-                                                        <a href="#">Plugin</a>
-                                                    </li>
-                                                </ul>
-                                                <ul class="product-facts clearfix">
-                                                    <li class="price">$24</li>
-                                                    <li class="sells">
-                                                        <span class="icon-basket"></span>141
-                                                    </li>
-                                                    <li class="product-fav">
-                                                        <span class="icon-heart" title="Add to collection" data-toggle="tooltip"></span>
-                                                    </li>
-                                                    <li class="product-rating">
-                                                        <ul class="list-unstyled">
-                                                            <li><span class="rate_active"></span></li>
-                                                            <li><span class="rate_active"></span></li>
-                                                            <li><span class="rate_active"></span></li>
-                                                            <li><span class="rate_active"></span></li>
-                                                            <li><span class="rate_disabled"></span></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <!-- Ends: .product-excerpt -->
-                                        </div><!-- Ends: .product-single -->
-                                    </div><!-- ends: .col-md-6 -->
-                                </div>
-
+                                @endforeach
+                            </div>
                         <div class="text-center m-top-20">
                             <a href="" class="btn btn--lg btn-primary">All New Products</a>
                         </div>
