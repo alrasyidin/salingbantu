@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
     <title> @yield('title') - Salingbantu </title>
     <link rel="stylesheet" href="{{asset('stisla/assets/modules/bootstrap/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{asset('stisla/assets/modules/fontawesome/css/all.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
     <link rel="stylesheet" href="{{asset('stisla/assets/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('stisla/assets/css/components.css')}}">
     @yield('customcss')

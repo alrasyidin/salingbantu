@@ -71,8 +71,7 @@ class CampaignController extends Controller
         ]);
 
         if($images = $request->file('campaign_images')){
-            $username = \Auth::user()->username;
-            $this->path = storage_path('app/public/campaign_images/'.$username);
+            $this->path = storage_path('app/public/campaign_images/');
             $this->dimensions = ['300', '60'];
             if (!File::isDirectory($this->path)) {
                 File::makeDirectory($this->path, 0777, true);
@@ -100,7 +99,6 @@ class CampaignController extends Controller
                     'size' => $image->getClientSize(),
                     'path' => $imageName,
                     'campaign_id' => $campaign->id,
-                    'username' => \Auth::user()->username,
             ]);
             }
         }
