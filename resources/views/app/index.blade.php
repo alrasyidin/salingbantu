@@ -24,7 +24,7 @@
                                                     <img src="{{asset("storage/campaign_images/300/".$campaign->images[0]['path'])}}" alt="" class="img-fluid">
                                                     <figcaption>
                                                         <ul class="list-unstyled">
-                                                            <li><a href="{{url('campaign/'.$campaign->slug)}}">Detail</a></li>
+                                                            <li><a href="{{url('campaign/'.$campaign->slug)}}">Detail Campaign</a></li>
                                                         </ul>
                                                     </figcaption>
                                                 </figure>
