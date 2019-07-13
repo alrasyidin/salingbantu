@@ -4,7 +4,7 @@
      <!-- end /.menu-area -->
      <section class="hero-area2 hero-area3 bgimage">
         <div class="bg_image_holder">
-            <img src="{{asset('stisla/img/hero-image01.png')}}" alt="background-image">
+            <img src="{{asset('stisla/assets/img/hero-image01.png')}}" alt="background-image">
         </div>
         <div class="hero-content content_above">
             <div class="content-wrapper">
@@ -12,7 +12,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="hero__content__title">
-                                <h1>7,685 Premium Templates & Themes</h1>
+                                <h1>Campaigns yang dapat kita bantu bersama</h1>
                             </div><!-- end .hero__btn-area-->
                             <div class="search-area">
                                 <div class="row">

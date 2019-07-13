@@ -50,7 +50,7 @@
                                 @endforeach
                             </div>
                         <div class="text-center m-top-20">
-                            <a href="" class="btn btn--lg btn-primary">All New Products</a>
+                            <a href="{{url('/campaigns')}}" class="btn btn--lg btn-primary">All New Products</a>
                         </div>
                     </div>
                     <!-- Ends: .product-list -->
