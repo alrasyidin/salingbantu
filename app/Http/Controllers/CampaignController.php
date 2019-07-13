@@ -12,6 +12,7 @@ class CampaignController extends Controller
     }
 
     public function campaigns(){
+        // $campaigns = Campaign::search('1')->get();
         $campaigns = Campaign::where('status','=','published')->with('user','images')->get();
         return view('app.campaigns',compact('campaigns'));
     }

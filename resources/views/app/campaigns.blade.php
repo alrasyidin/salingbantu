@@ -130,6 +130,7 @@
                 <!-- Start .product-list -->
                 <div class="col-md-12 product-list">
                     <div class="row">
+                        @if (!$campaigns->isEmpty())
                             @foreach ($campaigns as $campaign)
                             <div class="col-lg-4 col-md-6">
                                     <div class="product-single latest-single">
@@ -162,32 +163,51 @@
                                     </div><!-- Ends: .product-single -->
                                 </div><!-- ends: .col-md-6 -->
                             @endforeach
+                        @else
+                        <div class="col-md-12">
+                                <div class="empty-state" data-height="200" style="height: 200px;">
+                                        <div class="empty-state-icon m-3">
+                                          <i class="fas fa-question"></i>
+                                        </div>
+                                      <h2>OPPSSSSS!!</h2>
+                                      <p class="lead m-3">
+                                        Kami tidak menemukan campaign yang anda cari
+                                      </p>
+                        </div>
                     </div>
-                    <!-- Start Pagination -->
-                    <nav class="pagination-default">
-                        <ul class="pagination">
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Previous">
-                                    <span aria-hidden="true"><i class="fa fa-long-arrow-left"></i></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                            </li>
-                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
-                            <li class="page-item"><a class="page-link" href="#">10</a></li>
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Next">
-                                    <span aria-hidden="true"><i class="fa fa-long-arrow-right"></i></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav><!-- Ends: .pagination-default -->
+
+                        @endif
+                    </div>
                 </div>
                 <!-- Ends: .product-list -->
             </div>
         </div>
     </section><!-- ends: .product-grid -->
+@endsection
+
+@section('customcss')
+<style>
+    .empty-state{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 40px;
+    }
+    .empty-state-icon{
+        position: relative;
+        background-color: #6777ef;
+        width: 80px;
+        height: 80px;
+        line-height: 100px;
+        border-radius: 5px;
+    }
+    .empty-state .empty-state-icon i {
+        font-size: 40px;
+        color: #fff;
+        position: relative;
+        z-index: 1
+    }
+</style>
 @endsection
