@@ -34,12 +34,14 @@ class CampaignController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create($id = null)
+    public function create($slug = null)
     {
-        if(!empty($id)){
-            $campaign = Campaign::where('id',$id)->with('images')->firstOrFail();
+        if(!empty($slug)){
+            $campaign = Campaign::where('slug',$slug)->with('images')->firstOrFail();
             if(\Auth::user()->can('update', $campaign)){
                 return view('dashboard.campaign.form',compact('campaign'));
+            }else{
+                return abort(401);
             }
         }
         return view('dashboard.campaign.form');
@@ -54,7 +56,7 @@ class CampaignController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            "title" => "required|min:5|max:100|unique:campaigns",
+            "title" => "required|min:5|max:100|unique:campaigns,title",
             "description" => "required|min:150",
             "goals" => "required",
             "endof_campaign" => "required",
@@ -103,32 +105,9 @@ class CampaignController extends Controller
             }
         }
         
-        return redirect('dashboard/campaign')->with('sucess','Produk telah ditambahkan');
+        return redirect('dashboard/campaign')->with('success','Produk telah ditambahkan');
 
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
     /**
      * Update the specified resource in storage.
      *
@@ -138,7 +117,61 @@ class CampaignController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $campaign = Campaign::where('id',$id)->with('images')->firstOrFail();
+        
+        if(\Auth::user()->can('update', $campaign)){
+            $this->validate($request, [
+                "title" => "required|min:5|max:100|unique:campaigns,title,".$campaign->id,
+                "description" => "required|min:150",
+                "goals" => "required",
+                "endof_campaign" => "required",
+            ]);
+
+            $campaign = Campaign::find($id)->update([
+                'title' => $request->get('title'),
+                'description' => $request->get('description'),
+                'goals' => str_replace(".","",$request->get('goals')),
+                'endof_campaign' => $request->get('endof_campaign'),
+                'status' => 'published',
+                'slug' => str_slug($request->get('title'),'-'),
+            ]);
+
+            if($images = $request->file('campaign_images')){
+                $this->path = storage_path('app/public/campaign_images/');
+                $this->dimensions = ['300', '60'];
+                if (!File::isDirectory($this->path)) {
+                    File::makeDirectory($this->path, 0777, true);
+                }
+                
+                foreach($images as $image){
+                    $imageName   = uniqid().'_in_'.date('Ymd').'.'.$image->getClientOriginalExtension();
+                    Image::make($image->getRealPath())->save($this->path.'/'.$imageName);
+    
+                    foreach ($this->dimensions as $row) {
+                        $canvas = Image::canvas($row, $row);
+                        $resizeImage  = Image::make($image->getRealPath())->resize($row, $row, function($constraint) {
+                            $constraint->aspectRatio();
+                        });
+                        
+                        if (!File::isDirectory($this->path.'/'.$row)) {
+                            File::makeDirectory($this->path.'/'.$row);
+                        }
+        
+                        $canvas->insert($resizeImage,'center');
+                        $canvas->save($this->path.'/'.$row.'/'.$imageName);
+                    }
+                    CampaignImage::create([
+                        'name' => $image->getClientOriginalName(),
+                        'size' => $image->getClientSize(),
+                        'path' => $imageName,
+                        'campaign_id' => $id,
+                ]);
+                }
+            }
+            return redirect('dashboard/campaign')->with('success','Campaign telah berhasil diperbarui');
+        }else{
+            return abort(401);
+        } 
     }
 
     /**
@@ -164,14 +197,15 @@ class CampaignController extends Controller
         }
     }
 
-    public function deleteCampaignImg($id) {
-        $image = CampaignImage::where('id', '=', $id)->firstOrFail();
-        Storage::delete('public/campaign_images/'.$image->username.'/'.$image->path);
-        Storage::delete('public/campaign_images/'.$image->username.'/'.'60/'.$image->path);
-        Storage::delete('public/campaign_images/'.$image->username.'/'.'300/'.$image->path);
-        CampaignImage::find($id)->delete();
-
-        $response = array('status' => 'Images deleted!!');
-        return response()->json($response);
+    public function deleteimg($id) {
+        dd($id);
+        // $image = CampaignImage::where('id', '=', $id)->firstOrFail();
+        // Storage::delete('public/campaign_images/'.$image->path);
+        // Storage::delete('public/campaign_images/60/'.$image->path);
+        // Storage::delete('public/campaign_images/300/'.$image->path);
+        // CampaignImage::find($id)->delete();
+        // $response = array('status' => 'Images deleted!!');
+        // return response()->json($response);
     }
+
 }

@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 class CampaignController extends Controller
 {
     public function detail($slug){
-        // dd($slug);
-        return view('app.campaign.detail');
+        $campaign = Campaign::where('slug','=',$slug)->with('user','images')->first();
+        return view('app.campaign.detail',compact('campaign'));
     }
 
     public function campaigns(){

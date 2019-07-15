@@ -17,9 +17,8 @@
             <td data-label="kategori">{{str_rp($campaign->goals)}}</td>
             <td data-label="Status">{{$campaign->status}}</td>
             <td data-label="Action">
-                    <a href="{{url('dashboard/campaign/create').'/'.$campaign->id}}" class="btn btn-info btn-sm"><i class="fas fa-edit"></i></a>
+                    <a href="{{url('dashboard/campaign/create').'/'.$campaign->slug}}" class="btn btn-info btn-sm"><i class="fas fa-edit"></i></a>
                     <a href="#" class="btn btn-danger btn-sm" onclick="actControl('delete','{{$campaign->id}}')"><i class="fas fa-trash"></i></a>
-
             </td>
         </tr>
         @endforeach

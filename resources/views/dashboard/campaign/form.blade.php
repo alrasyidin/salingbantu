@@ -14,15 +14,21 @@
     <div class="section-body">
         <div class="card">
             <div class="card-header">
-                 {!!empty($campaign->id) ? "<h4>Tambah Campaign</h4>" : "<h4>Edit Campaign</h4>"!!}
+                {!!empty($campaign) ? "<h4>Tambah Campaign</h4>" : "<h4>Edit Campaign</h4>"!!}
             </div>
             <div class="card-body">
-                <form action="{{route('store.campaign')}}" method="post" enctype="multipart/form-data">
+                    @if (empty($campaign))
+                        <form action="{{route('store.campaign')}}" method="post" enctype="multipart/form-data">
+                    @else
+                        <form action="{{url('dashboard/campaign/update/').'/'.$campaign->id}}" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="id" value="{{$campaign->id}}">    
+                    @endif
+
                     @csrf
                     <div class="form-row">
                         <div class="form-group col">
                             <label for="lastname">Judul</label>
-                            <input type="text" name="title" class="form-control" value="{{$campaign->title}}" placeholder="Judul Campaign">
+                            <input type="text" name="title" class="form-control" value="{{!empty($campaign) ? $campaign->title : old('title') }}" placeholder="Judul Campaign">
                             @error('title')
                                 <span class="invalid-feedback d-block">{{ $message }}</span>
                             @enderror
@@ -32,7 +38,7 @@
                     <div class="form-row">
                         <div class="form-group col">
                             <label for="lastname">Deskripsi</label>
-                            <textarea name="description" class="form-control" id="description" cols="30" rows="10">{{$campaign->description}}"</textarea>
+                            <textarea name="description" class="form-control" id="description" cols="30" rows="10">{{!empty($campaign) ?  $campaign->description : old('description') }}</textarea>
                             @error('description')
                             <span class="invalid-feedback d-block">{{ $message }}</span>
                             @enderror
@@ -50,15 +56,14 @@
                     <div class="form-row">
                             <div class="form-group col">
                                 <label for="lastname">Perkiraaan Selesai</label>
-                                <input type="date" name="endof_campaign" class="form-control" placeholder="Perkiraan Selesai" value="{{$campaign->endof_campaign}}">
+                                <input type="date" name="endof_campaign" class="form-control" placeholder="Perkiraan Selesai" value="{{!empty($campaign) ? $campaign->endof_campaign : old("endof_campaign") }}">
                                 @error('endof_campaign')
-                                <span class="invalid-feedback d-block">{{ $message }}</span>
-    
+                                    <span class="invalid-feedback d-block">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="form-group col">
                                 <label for="firstname">Jumlah Dana</label>
-                                <input onkeyup="numberToCurrency(this)" type="text" name="goals" class="form-control" placeholder="Jumlah dana" value="{{$campaign->goals}}">
+                                <input onkeyup="numberToCurrency(this)" type="text" name="goals" class="form-control" placeholder="Jumlah dana" value="{{!empty($campaign) ?  $campaign->goals : old("goals")}}">
                                 @error('goals')
                                     <span class="invalid-feedback d-block">{{ $message }}</span>
                                 @enderror
@@ -134,15 +139,14 @@
             @if(!empty($campaign->images)) 
                 @foreach($campaign->images as $image)
                     {
-                        caption: "{{ $image->name }}", 
-                        size: '{{ $image->size }}', 
-                        key: '{{ $image->id }}', 
-                        url: '{{url("dashboard/campaign/delete-image/$image->id")}}', 
+                        caption : '{{ $image->name }}', 
+                        size    : '{{ $image->size }}', 
+                        key     : '{{ $image->id }}', 
+                        url     : '{{url("dashboard/campaign/delete-image/$image->id")}}', 
                         showDrag: true
                     },
                 @endforeach
             @endif
-
         ]
         
     });
