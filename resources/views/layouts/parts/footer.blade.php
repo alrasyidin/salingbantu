@@ -149,8 +149,6 @@
     <script src="{{asset('sb/vendor_assets/js/jquery/uikit.min.js')}}"></script>
     <script src="{{asset('sb/vendor_assets/js/bootstrap/popper.js')}}"></script>
     <script src="{{asset('sb/vendor_assets/js/bootstrap/bootstrap.min.js')}}"></script>
-    <script src="{{asset('sb/vendor_assets/js/chart.bundle.min.js')}}"></script>
-    <script src="{{asset('sb/vendor_assets/js/grid.min.js')}}"></script>
     <script src="{{asset('sb/vendor_assets/js/jquery-ui.min.js')}}"></script>
     <script src="{{asset('sb/vendor_assets/js/jquery.barrating.min.js')}}"></script>
     <script src="{{asset('sb/vendor_assets/js/jquery.countdown.min.js')}}"></script>
@@ -159,13 +157,7 @@
     <script src="{{asset('sb/vendor_assets/js/jquery.magnific-popup.min.js')}}"></script>
     <script src="{{asset('sb/vendor_assets/js/owl.carousel.min.js')}}"></script>
     <script src="{{asset('sb/vendor_assets/js/select2.full.min.js')}}"></script>
-    <script src="{{asset('sb/vendor_assets/js/slick.min.js')}}"></script>
-    <script src="{{asset('sb/vendor_assets/js/tether.min.js')}}"></script>
-    <script src="{{asset('sb/vendor_assets/js/trumbowyg.min.js')}}"></script>
-    <script src="{{asset('sb/vendor_assets/js/venobox.min.js')}}"></script>
-    <script src="{{asset('sb/vendor_assets/js/waypoints.min.js')}}"></script>
-    <script src="{{asset('sb/theme_assets/js/dashboard.js')}}"></script>
-    <script src="{{asset('sb/theme_assets/js/main.js')}}"></script>
-    <script src="{{asset('sb/theme_assets/js/map.js')}}"></script>
+    <script src="{{asset('js/core.js')}}"></script>
+
     @yield('customjs')
     <!-- endinject-->
