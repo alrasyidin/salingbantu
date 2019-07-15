@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="breadcrumb-contents">
-                    <h2 class="page-title">DigiPro Multipurpose Marketplace HTML Template</h2>
+                    <h2 class="page-title">{{$campaign->title}}</h2>
                 </div>
             </div><!-- end .col-md-12 -->
         </div><!-- end .row -->
@@ -18,93 +18,42 @@
         <div class="row">
             <div class="col-lg-8 col-md-12">
                 <div class="item-preview">
-                    <div class="item-prev-area">
-                        <div class="preview-img-wrapper">
-                            <div class="item__preview-img">
-                                <div class="item__preview-slider">
-                                    <div class="prev-slide">
-                                        <img src="{{asset('apps/img/single1.jpg')}}" alt="Preview Image">
+                        <div class="owl-carousel owl-theme" data-slider-id="1">
+                                @if (!$campaign->images->isEmpty())
+                                    @foreach ($campaign->images as $key =>  $image)
+                                        <div class="item">
+                                            <img class="d-block w-100" src="{{asset('storage/campaign_images/'.$image->path)}}" height="430" width="750">
+                                        </div>
+                                    @endforeach
+                                @else
+                                    <div class="item">
+                                        <img class="d-block w-100" src="{{asset('images/single1.jpg')}}">
                                     </div>
-                                    <div class="prev-slide">
-                                        <img src="{{asset('apps/img/single1.jpg')}}" alt="Preview Image">
-                                    </div>
-                                    <div class="prev-slide">
-                                        <img src="{{asset('apps/img/single1.jpg')}}" alt="Preview Image">
-                                    </div>
-                                    <div class="prev-slide">
-                                        <img src="{{asset('apps/img/single1.jpg')}}" alt="Preview Image">
-                                    </div>
-                                    <div class="prev-slide">
-                                        <img src="{{asset('apps/img/single1.jpg')}}" alt="Preview Image">
-                                    </div>
-                                    <div class="prev-slide">
-                                        <img src="{{asset('apps/img/single1.jpg')}}" alt="Preview Image">
-                                    </div>
-                                    <div class="prev-slide">
-                                        <img src="{{asset('apps/img/single1.jpg')}}" alt="Preview Image">
-                                    </div>
-                                    <div class="prev-slide">
-                                        <img src="{{asset('apps/img/single1.jpg')}}" alt="Preview Image">
-                                    </div>
-                                    <div class="prev-slide">
-                                        <img src="{{asset('apps/img/single1.jpg')}}" alt="Preview Image">
-                                    </div>
-                                    <div class="prev-slide">
-                                        <img src="{{asset('apps/img/single1.jpg')}}" alt="Preview Image">
-                                    </div>
-                                </div><!-- ends: .item--preview-slider -->
-                                <div class="prev-nav thumb-nav">
-                                    <span class="lnr nav-left icon-arrow-left"></span>
-                                    <span class="lnr nav-right icon-arrow-right"></span>
-                                </div><!-- ends: .prev-nav -->
+                                    <div class="item">
+                                            <img class="d-block w-100" src="{{asset('images/single1.jpg')}}">
+                                        </div>
+                                @endif
                             </div>
-                            <div class="item__preview-thumb">
-                                <div class="prev-thumb">
-                                    <div class="thumb-slider">
-                                        <div class="item-thumb">
-                                            <img src="{{asset('apps/img/thumb1.jpg')}}" alt="Thumbnail Image">
-                                        </div>
-                                        <div class="item-thumb">
-                                            <img src="{{asset('apps/img/thumb1.jpg')}}" alt="Thumbnail Image">
-                                        </div>
-                                        <div class="item-thumb">
-                                            <img src="{{asset('apps/img/thumb1.jpg')}}" alt="Thumbnail Image">
-                                        </div>
-                                        <div class="item-thumb">
-                                            <img src="{{asset('apps/img/thumb1.jpg')}}" alt="Thumbnail Image">
-                                        </div>
-                                        <div class="item-thumb">
-                                            <img src="{{asset('apps/img/thumb1.jpg')}}" alt="Thumbnail Image">
-                                        </div>
-                                        <div class="item-thumb">
-                                            <img src="{{asset('apps/img/thumb1.jpg')}}" alt="Thumbnail Image">
-                                        </div>
-                                        <div class="item-thumb">
-                                            <img src="{{asset('apps/img/thumb1.jpg')}}" alt="Thumbnail Image">
-                                        </div>
-                                        <div class="item-thumb">
-                                            <img src="{{asset('apps/img/thumb1.jpg')}}" alt="Thumbnail Image">
-                                        </div>
-                                        <div class="item-thumb">
-                                            <img src="{{asset('apps/img/thumb1.jpg')}}" alt="Thumbnail Image">
-                                        </div>
-                                        <div class="item-thumb">
-                                            <img src="{{asset('apps/img/thumb1.jpg')}}" alt="Thumbnail Image">
-                                        </div>
-                                    </div><!-- end .thumb-slider -->
-                                </div>
-                            </div><!-- ends: .item__preview-thumb -->
-                        </div><!-- ends: .preview-img-wrapper -->
-                    </div><!-- Ends: .item-prev-area -->
+
+                            <div class="owl-thumbs" data-slider-id="1">
+                                @if (!$campaign->images->isEmpty())
+                                    @foreach ($campaign->images as $image)
+                                    <button class="owl-thumb-item">
+                                            <img src="{{asset('storage/campaign_images/60/'.$image->path)}}"  height="80" width="80" alt="This is the thumbnail of the item">
+                                        </button>
+                                    @endforeach
+                                @else
+                                    <button class="owl-thumb-item">
+                                        <img src="{{asset('images/single1.jpg')}}" alt="Keep calm this isn't the end of the world, the preview is just missing." height="80" width="80" >
+                                    </button>
+                                    <button class="owl-thumb-item">
+                                            <img src="{{asset('images/single1.jpg')}}" alt="Keep calm this isn't the end of the world, the preview is just missing." height="80" width="80" >
+                                        </button>
+                                @endif
+                                
+                            </div>
                     <div class="item-preview--excerpt">
-                        {{-- <div class="item-preview--action">
-                            <div class="action-btns">
 
-                            </div>
-                        </div><!-- ends: .item-preview--action -->
-                        <div class="item-preview--activity">
-
-                        </div><!-- Ends: .item-preview--activity --> --}}
                     </div>
                 </div><!-- ends: .item-preview-->
             </div><!-- ends: .col-md-8 -->
@@ -115,7 +64,7 @@
                             <h3>
                                {{str_rp('1000000000')}}
                             </h3>
-                            <p>Terkumpul dari <strong>{{str_rp('1000000000')}}</strong> </p> 
+                            <p>Terkumpul dari <strong>{{str_rp($campaign->goals)}}</strong> </p> 
                         </div>
                         <div class="purchase-button">
                             <a href="#" class="btn btn--lg btn-primary">Donasi Sekarang</a>
@@ -129,11 +78,10 @@
                             <div class="author-infos">
                                 <div class="author-top">
                                     <div class="author_avatar">
-                                        <img src="{{asset('apps/img/author-avatar.jpg')}}" alt="Presenting the broken author avatar :D">
+                                        <img src="{{asset("storage/user_photo/60/".$campaign->user->avatar)}}" alt="Presenting the broken author avatar :D">
                                     </div>
                                     <div class="author">
-                                        <h5>AazzTech</h5>
-                                        <p>Joined: 08 April 2016</p>
+                                        <h5>{{$campaign->user->fullname()}}</h5>
                                     </div>
                                 </div><!-- ends: .author-top -->
                             </div><!-- ends: .author-infos -->
@@ -193,18 +141,7 @@
                         <div class="fade show tab-pane product-tab active" id="product-details" role="tabpanel"
                             aria-labelledby="tab1">
                             <div class="tab-content-wrapper">
-                                <h3>Landing Page Details</h3>
-                                <p class="p-bottom-30">Nunc placerat mi id nisi interdum mollis. Praesent pharetra,
-                                    justo ut scelerisque the
-                                    mattis, leo quam aliquet congue placerat mi id nisi interdum mollis. Praesent
-                                    pharetra,
-                                    justo ut scel erisque the mattis, leo quam aliquet congue justo ut scelerisque.
-                                    Praesent
-                                    pharetra, justo ut scelerisque the mattis, leo quam aliquet congue justo ut
-                                    scelerisque.</p>
-                                <h3>Features With Image:</h3>
-                                <img src="{{asset('apps/img/prodesc.jpg')}}" alt="This is product description thumbnail">
-                                
+                                {!! $campaign->description !!}
                             </div>
                         </div><!-- ends: .tab-content -->
                         <div class="fade tab-pane product-tab" id="product-comment" role="tabpanel"
@@ -296,14 +233,7 @@
                             <h4>Donatur</h4>
                         </div>
                         <ul class="infos">
-                            <li>
-                                <p class="data-label">Released</p>
-                                <p class="info">16 June 2015</p>
-                            </li>
-                            <li>
-                                <p class="data-label">Updated</p>
-                                <p class="info">28 July 2016 </p>
-                            </li>
+                            
                         </ul><!-- ends: .infos -->
                     </div><!-- ends: .card--product-infos -->
                 </aside><!-- ends: .sidebar -->
@@ -330,5 +260,78 @@
         border: 0;
         border-radius: 3px;
     }
+
+    .owl-thumb-item img {
+        width: 100px;
+        height: auto;
+    }
+    .owl-thumbs {
+        bottom: 0;
+        left: 0;
+        display: table;
+        width: 100%;
+        text-align: center;
+    }
+
+    .owl-thumb-item {
+        display: table-cell;
+        border: none;
+        background: none;
+        padding: 5px;
+        opacity: .4;
+    }
+
+    .owl-thumb-item.active {
+        opacity: 1;
+    }
+    .label {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: #0a6cff;
+        color: white;
+        padding: 10px 20px;
+        z-index: 5;
+        text-align: center;
+    }
+    
+    body .owl-nav div{
+        position: absolute;
+        top: 40%;
+        width: 40px;
+        height: 40px;
+        border-radius: 20%;
+    }
+    body .owl-prev{
+        left: 10px;
+        display: flex;
+        background-color:white;
+    }
+    body .owl-next{
+        right: 10px;
+        display: flex;
+        background-color:white;
+    }
+    body .owl-prev i, body .owl-next i{
+        margin: auto;
+    }
+    
 </style>
+@endsection
+
+@section('customjs')
+<script>
+        $('.owl-carousel').owlCarousel({
+            singleItem: true,
+            items:1,
+            autoHeight:true,
+            autoplay:true,
+            autoplayTimeout: 3000,
+            thumbs: true,
+            thumbsPrerendered: true,
+            thumbImage: false,
+            nav: true,
+            navText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"]
+        })
+      </script>
 @endsection

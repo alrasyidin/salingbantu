@@ -8,8 +8,10 @@ Route::group(['prefix' => 'dashboard','middleware' => 'auth','namespace' => 'Das
     Route::post('changepassword', 'SettingProfileController@changePassword');
 
     Route::get('campaign', 'CampaignController@index');
-    Route::get('campaign/create/{id?}', 'CampaignController@create')->name('create.campaign');
-    Route::post('campaign/store', 'CampaignController@store')->name('store.campaign');
+    Route::get('campaign/create/{slug?}', 'CampaignController@create')->name('create.campaign');
+    Route::post('campaign/store/', 'CampaignController@store')->name('store.campaign');
+    Route::post('campaign/update/{id}', 'CampaignController@update');
+
     Route::get('campaign/data', 'CampaignController@data');
     Route::delete('campaign/{id}', 'CampaignController@destroy');
     Route::post('campaign/delete-image/{id}', 'CampaignController@deleteCampaignImg');

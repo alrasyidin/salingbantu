@@ -14,5 +14,5 @@
 
 Auth::routes();
 Route::get('/','HomeController@index');
-Route::get('/campaign/{slug}','CampaignController@detail');
+Route::get('campaign/{slug}','CampaignController@detail');
 Route::get('/campaigns','CampaignController@campaigns');
