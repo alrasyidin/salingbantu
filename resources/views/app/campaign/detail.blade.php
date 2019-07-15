@@ -62,12 +62,12 @@
                     <div class="sidebar-card card-pricing">
                         <div class="price">
                             <h3>
-                               {{str_rp('1000000000')}}
+                                {{str_rp('1000000000')}}
                             </h3>
                             <p>Terkumpul dari <strong>{{str_rp($campaign->goals)}}</strong> </p> 
                         </div>
                         <div class="purchase-button">
-                            <a href="#" class="btn btn--lg btn-primary">Donasi Sekarang</a>
+                            <a href="{{url('/campaign').'/'.$campaign->slug.'/contribute'}}" class="btn btn--lg btn-primary">Donasi Sekarang</a>
                         </div><!-- end .purchase-button -->
                     </div><!-- end .sidebar--card -->
 

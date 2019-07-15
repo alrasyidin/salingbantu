@@ -16,3 +16,8 @@ Auth::routes(['verify' => true]);
 Route::get('/','HomeController@index');
 Route::get('campaign/{slug}','CampaignController@detail');
 Route::get('/campaigns','CampaignController@campaigns');
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('campaign/{slug}/contribute','CampaignController@contribute');
+
+});
