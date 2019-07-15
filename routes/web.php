@@ -12,7 +12,7 @@
 */
 
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 Route::get('/','HomeController@index');
 Route::get('campaign/{slug}','CampaignController@detail');
 Route::get('/campaigns','CampaignController@campaigns');
