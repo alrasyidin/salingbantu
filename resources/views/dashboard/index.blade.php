@@ -18,7 +18,7 @@
                                 <h4>Dana Terkumpul</h4>
                             </div>
                             <div class="card-body">
-                                42
+                               {{str_rp('11111111111111')}}
                             </div>
                         </div>
                     </div>
@@ -33,7 +33,7 @@
                                 <h4>Donasi Disalurkan</h4>
                             </div>
                             <div class="card-body">
-                                1,201
+                                    {{str_rp('11111111111111')}}
                             </div>
                         </div>
                     </div>
@@ -48,7 +48,7 @@
                                 <h4>Campaign Dimulai</h4>
                             </div>
                             <div class="card-body">
-                                {{$campaigns}}
+                                {{$campaigns['published']}}
                             </div>
                         </div>
                     </div>
@@ -63,7 +63,7 @@
                                 <h4>Campaign Dibatalkan</h4>
                             </div>
                             <div class="card-body">
-                                {{$campaigns}}
+                                {{$campaigns['cancel']}}
                             </div>
                         </div>
                     </div>
