@@ -21,7 +21,8 @@
         </div><!-- ends: .row -->
     </div>
 </div>
-<form action="">
+<form action="{{route('contribute.store',$campaign->slug)}}" method="post" >
+@csrf
 <div class="cpg pt-0">
     <div class="container">
         <div class="row">
@@ -34,10 +35,13 @@
                                     <label class="sr-only" for="inlineFormInputGroup">0</label>
                                     <div class="input-group mb-2">
                                         <div class="input-group-prepend">
-                                            <div class="input-group-text">Rp.</div>
+                                            <div class="input-group-text font-weight-bold">Rp.</div>
                                         </div>
-                                        <input onkeyup="numberToCurrency(this)" type="text" class="form-control" id="inlineFormInputGroup"
+                                        <input onkeyup="numberToCurrency(this)" name="amount" type="text" class="form-control @error('amount') is-invalid @enderror" id="inlineFormInputGroup"
                                             placeholder="0">
+                                        @error('amount')
+                                            <span class="invalid-feedback d-block text-left">{{ $message }}</span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <hr class="col-auto">
