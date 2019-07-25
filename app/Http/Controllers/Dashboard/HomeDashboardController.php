@@ -5,14 +5,17 @@ namespace App\Http\Controllers\Dashboard;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Campaign;
+use App\Models\Transaction;
 
 class HomeDashboardController extends Controller
 {
     public function index(){
         return view('dashboard.index',[
-            'campaigns' => $this->getCampaignData() 
+            'campaigns' => $this->getCampaignData(),
+            'amount' => $this->amount(\Auth::user()->id)
         ]);
     }
+
     public function getCampaignData(){
         $published = Campaign::where([
             ['user_id',"=",\Auth::user()->id],
@@ -30,7 +33,17 @@ class HomeDashboardController extends Controller
                 ['user_id',"=",\Auth::user()->id],
                 ['status','=','suspend']
                 ])->count();
-    
         return compact('published','finish','cancel','suspend');
+    }
+
+    public function amount($id){
+        return Transaction::where('user_id',"=",$id)->sum('amount');
+    }
+
+    public function getTransaction(Request $request){
+        if($request->ajax()){
+            $transactions = Transaction::where('user_id',"=",\Auth::user()->id)->orderBy('created_at','desc')->paginate(5);
+            return view('dashboard.parts.transactiondata',compact('transactions'))->render();
+        }
     }
 }
