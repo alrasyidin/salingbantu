@@ -17,8 +17,5 @@ class CampaignController extends Controller
         return view('app.campaigns',compact('campaigns'));
     }
 
-    public function contribute($slug){
-        $campaign = Campaign::where('slug','=',$slug)->with('images')->firstOrFail();
-        return view('app.campaign.contribute',compact('campaign'));
-    }
+
 }

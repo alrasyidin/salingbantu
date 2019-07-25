@@ -18,6 +18,9 @@ Route::get('campaign/{slug}','CampaignController@detail');
 Route::get('/campaigns','CampaignController@campaigns');
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('campaign/{slug}/contribute','CampaignController@contribute');
+    Route::get('campaign/{slug}/contribute','ContributeController@contribute');
+    Route::post('campaign/{slug}/contribute','ContributeController@store')->name('contribute.store');
+    Route::get('contribute/{id}','ContributeController@contributeSucess')->name('transaction.sucess');
+
 
 });

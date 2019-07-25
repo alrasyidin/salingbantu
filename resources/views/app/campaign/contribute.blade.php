@@ -21,7 +21,8 @@
         </div><!-- ends: .row -->
     </div>
 </div>
-<form action="">
+<form action="{{route('contribute.store',$campaign->slug)}}" method="post" >
+@csrf
 <div class="cpg pt-0">
     <div class="container">
         <div class="row">
@@ -32,12 +33,18 @@
                             <div class="contribute-form">
                                 <div class="col-auto">
                                     <label class="sr-only" for="inlineFormInputGroup">0</label>
-                                    <div class="input-group mb-2">
+                                    <div class="input-group mb-4">
                                         <div class="input-group-prepend">
-                                            <div class="input-group-text">Rp.</div>
+                                            <div class="input-group-text font-weight-bold">Rp.</div>
                                         </div>
-                                        <input onkeyup="numberToCurrency(this)" type="text" class="form-control" id="inlineFormInputGroup"
+                                        <input name="amount" type="number" min="1000" class="form-control @error('amount') is-invalid @enderror" id="inlineFormInputGroup"
                                             placeholder="0">
+                                        @error('amount')
+                                            <span class="invalid-feedback d-block text-left">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                    <div class="alert alert-warning" role="alert">
+                                        Lakukan kontribusi pada campaign dengan minimal kontribusi <strong>{{str_rp('5000')}}</strong>                                    
                                     </div>
                                 </div>
                                 <hr class="col-auto">

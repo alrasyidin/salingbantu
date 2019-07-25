@@ -1,0 +1,32 @@
+.cpg {
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+    background: #f2f3f4;
+}
+.bg {
+    text-align: center;
+    background: #fff;
+    border-radius: 3px;
+    padding: 20px 30px;
+}
+.contribute-form {
+    padding: 20px;
+}
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid #e9ebf4;
+}
+
+.dealine-payment{
+    background-color: aliceblue;
+    border: 1px #36a3f7 solid;
+    padding: 15px;
+    margin:0px 0px 30px;
+}
+
+.dealine-payment h1{
+    font-size: 50px;
+    padding: 5px;
+}

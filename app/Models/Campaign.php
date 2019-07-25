@@ -53,4 +53,9 @@ class Campaign extends Model
  	    return $array;
     }
 
+    public function transaction()
+    {
+        return $this->hasMany('App\Models\Transaction');
+    }
+
 }
