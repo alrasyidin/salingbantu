@@ -4,7 +4,7 @@
 <section class="section">
     <div class="section-header">
         <h1>Manage Campaign</h1>
-        
+
         <div class="section-header-breadcrumb">
             <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
             <div class="breadcrumb-item"><a href="#">Layout</a></div>
@@ -21,7 +21,7 @@
                         <form action="{{route('store.campaign')}}" method="post" enctype="multipart/form-data">
                     @else
                         <form action="{{url('dashboard/campaign/update/').'/'.$campaign->id}}" method="post" enctype="multipart/form-data">
-                        <input type="hidden" name="id" value="{{$campaign->id}}">    
+                        <input type="hidden" name="id" value="{{$campaign->id}}">
                     @endif
 
                     @csrf
@@ -52,6 +52,9 @@
                                         <input id="upload-image" type="file" name="campaign_images[]" class="file-input-add-product" data-preview-file-type="text" multiple>
                                     </div>
                         </div>
+                        @error('campaign_images[]')
+                        <span class="invalid-feedback d-block">{{ $message }}</span>
+                        @enderror
                     </div>
                     <div class="form-row">
                             <div class="form-group col">
@@ -62,12 +65,19 @@
                                 @enderror
                             </div>
                             <div class="form-group col">
-                                <label for="firstname">Jumlah Dana</label>
-                                <input onkeyup="numberToCurrency(this)" type="text" name="goals" class="form-control" placeholder="Jumlah dana" value="{{!empty($campaign) ?  $campaign->goals : old("goals")}}">
-                                @error('goals')
-                                    <span class="invalid-feedback d-block">{{ $message }}</span>
-                                @enderror
-                            </div>
+                                    <label for="jumlahdana">Jumlah Dana</label>
+                                    <div class="input-group">
+                                      <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                          <strong>Rp.</strong>
+                                        </div>
+                                      </div>
+                                      <input onkeyup="numberToCurrency(this)" type="text" name="goals" class="form-control" placeholder="Jumlah dana" value="{{!empty($campaign) ?  $campaign->goals : old("goals")}}">
+                                      @error('goals')
+                                          <span class="invalid-feedback d-block">{{ $message }}</span>
+                                      @enderror
+                                    </div>
+                                  </div>
                         </div>
 
                 <div class="card-footer bg-whitesmoke">
@@ -90,7 +100,7 @@
     <script src="{{ asset('stisla/assets/modules/file-input/themes/fa/theme.js')}}"></script>
 
     <script>
-    
+
     $(document).ready(function () {
         $('#description').summernote({
             height: 300,
@@ -129,26 +139,26 @@
         initialPreviewAsData: true,
         allowedFileExtensions: ["png", "jpg", "jpeg" ],
         initialPreview: [
-            @if(!empty($campaign->images)) 
+            @if(!empty($campaign->images))
                 @foreach($campaign->images as $image)
                     "{{ asset('storage/campaign_images/'.$image->username.'/'.$image->path) }}",
-                @endforeach            
+                @endforeach
             @endif
         ],
         initialPreviewConfig: [
-            @if(!empty($campaign->images)) 
+            @if(!empty($campaign->images))
                 @foreach($campaign->images as $image)
                     {
-                        caption : '{{ $image->name }}', 
-                        size    : '{{ $image->size }}', 
-                        key     : '{{ $image->id }}', 
-                        url     : '{{url("dashboard/campaign/delete-image/$image->id")}}', 
+                        caption : '{{ $image->name }}',
+                        size    : '{{ $image->size }}',
+                        key     : '{{ $image->id }}',
+                        url     : '{{url("dashboard/campaign/delete-image/$image->id")}}',
                         showDrag: true
                     },
                 @endforeach
             @endif
         ]
-        
+
     });
 
 </script>
