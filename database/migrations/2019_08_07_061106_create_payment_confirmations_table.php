@@ -16,7 +16,7 @@ class CreatePaymentConfirmationsTable extends Migration
         Schema::create('payment_confirmations', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->string('user_id',36);
-            $table->string('campaign_id',36);
+            $table->string('transaction_id',36);
             $table->unsignedBigInteger('value');
             $table->date('payment_date');
             $table->string('payment_doc');
@@ -27,7 +27,7 @@ class CreatePaymentConfirmationsTable extends Migration
             $table->foreign('user_creditacc')->references('id')->on('credit_accounts');
             $table->foreign('admin_creditacc')->references('id')->on('admin_credit_accounts');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('campaign_id')->references('id')->on('campaigns');
+            $table->foreign('transaction_id')->references('id')->on('transactions');
             $table->timestamps();
         });
     }
