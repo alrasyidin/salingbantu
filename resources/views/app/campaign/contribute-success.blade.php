@@ -36,7 +36,7 @@
                 <p>Nominal yang harus dibayar: <h1> {{str_rp($transaction->amount)}}</h1>
                 </p>
                 <p><u>
-                    <a href="">Konfirmasi Pembayaran</a>
+                    <a href="{{route('confirmpayment',['id' => $transaction->id])}}">Konfirmasi Pembayaran</a>
                 </u>
                 </p>
                 <a href="" class="btn btn-primary btn-block">Lihat Status Pembayaran</a>

@@ -15,7 +15,7 @@ class CampaignController extends Controller
     {
         $this->middleware(['auth', 'verified']);
     }
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -63,8 +63,10 @@ class CampaignController extends Controller
         $this->validate($request, [
             "title" => "required|min:5|max:100|unique:campaigns,title",
             "description" => "required|min:150",
-            "goals" => "required",
+            "goals" => "required|max:30",
             "endof_campaign" => "required",
+            "campaign_images" => "required",
+            "campaign_images.*" => "image|mimes:jpeg,png,jpg,gif,svg|max:2048"
         ]);
 
         $campaign = Campaign::create([
@@ -83,7 +85,7 @@ class CampaignController extends Controller
             if (!File::isDirectory($this->path)) {
                 File::makeDirectory($this->path, 0777, true);
             }
-            
+
             foreach($images as $image){
                 $imageName   = uniqid().'_in_'.date('Ymd').'.'.$image->getClientOriginalExtension();
                 Image::make($image->getRealPath())->save($this->path.'/'.$imageName);
@@ -93,11 +95,11 @@ class CampaignController extends Controller
                     $resizeImage  = Image::make($image->getRealPath())->resize($row, $row, function($constraint) {
                         $constraint->aspectRatio();
                     });
-                    
+
                     if (!File::isDirectory($this->path.'/'.$row)) {
                         File::makeDirectory($this->path.'/'.$row);
                     }
-    
+
                     $canvas->insert($resizeImage,'center');
                     $canvas->save($this->path.'/'.$row.'/'.$imageName);
                 }
@@ -109,8 +111,8 @@ class CampaignController extends Controller
             ]);
             }
         }
-        
-        return redirect('dashboard/campaign')->with('success','Produk telah ditambahkan');
+
+        return redirect('dashboard/campaign')->with('success','Campaign telah ditambahkan');
 
     }
     /**
@@ -123,7 +125,7 @@ class CampaignController extends Controller
     public function update(Request $request, $id)
     {
         $campaign = Campaign::where('id',$id)->with('images')->firstOrFail();
-        
+
         if(\Auth::user()->can('update', $campaign)){
             $this->validate($request, [
                 "title" => "required|min:5|max:100|unique:campaigns,title,".$campaign->id,
@@ -147,21 +149,21 @@ class CampaignController extends Controller
                 if (!File::isDirectory($this->path)) {
                     File::makeDirectory($this->path, 0777, true);
                 }
-                
+
                 foreach($images as $image){
                     $imageName   = uniqid().'_in_'.date('Ymd').'.'.$image->getClientOriginalExtension();
                     Image::make($image->getRealPath())->save($this->path.'/'.$imageName);
-    
+
                     foreach ($this->dimensions as $row) {
                         $canvas = Image::canvas($row, $row);
                         $resizeImage  = Image::make($image->getRealPath())->resize($row, $row, function($constraint) {
                             $constraint->aspectRatio();
                         });
-                        
+
                         if (!File::isDirectory($this->path.'/'.$row)) {
                             File::makeDirectory($this->path.'/'.$row);
                         }
-        
+
                         $canvas->insert($resizeImage,'center');
                         $canvas->save($this->path.'/'.$row.'/'.$imageName);
                     }
@@ -176,7 +178,7 @@ class CampaignController extends Controller
             return redirect('dashboard/campaign')->with('success','Campaign telah berhasil diperbarui');
         }else{
             return abort(401);
-        } 
+        }
     }
 
     /**
