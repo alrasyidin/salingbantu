@@ -11,7 +11,7 @@ class Transaction extends Model
     use Uuids;
 
     protected $fillable = array('inv_number','user_id','campaign_id','amount','note','status');
-    
+
     public function campaign()
     {
         return $this->belongsTo('App\Models\Campaign');

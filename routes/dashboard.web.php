@@ -18,4 +18,8 @@ Route::group(['prefix' => 'dashboard','middleware' => 'auth','namespace' => 'Das
     Route::delete('campaign/{id}', 'CampaignController@destroy');
     Route::post('campaign/delete-image/{id}', 'CampaignController@deleteCampaignImg');
 
+    Route::get('paymentconfirmation/{id}', 'PaymentConfirmationController@index')->name('confirmpayment');
+    Route::post('paymentconfirmation', 'PaymentConfirmationController@store')->name('store.comfirmpayment');
+
+
 });
