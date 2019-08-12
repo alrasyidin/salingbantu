@@ -15,6 +15,9 @@ class DatabaseSeeder extends Seeder
         $this->call(CampaignTableSeeder::class);
         $this->call(CampaignImagesTableSeeder::class);
         $this->call(BanksTableSeeder::class);
+        $this->call(AdminTableSeeder::class);
+        $this->call(AdminCreditAccountsTableSeeder::class);
+        $this->call(CreditAccountsTableSeeder::class);
 
     }
 }
