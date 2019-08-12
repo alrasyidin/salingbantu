@@ -46,7 +46,8 @@ class ContributeController extends Controller
         $transaction = Transaction::where([
             ['id','=',$id],
             ['user_id','=',\Auth::user()->id]
-        ])->first();
+        ])->firstOrFail();
+
         if($transaction->exists()){
             $transaction->first();
             return view('app.campaign.contribute-success',compact('transaction'));
