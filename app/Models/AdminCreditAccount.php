@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use App\Traits\Uuids;
 
-class CreditAccount extends Model
+class AdminCreditAccount extends Model
 {
     use Uuids;
     public $incrementing = false;
@@ -21,18 +21,8 @@ class CreditAccount extends Model
         'bank_id'
     ];
 
-    public function user() {
-        return $this->belongsTo('App\Models\User');
-    }
-
-    public function payment_confirmation() {
-        return $this->hasMany('App\Models\PaymentConfirmation');
-    }
-
     public function bank()
     {
         return $this->hasOne('App\Models\Bank', 'code', 'bank_id');
     }
-
-
 }
