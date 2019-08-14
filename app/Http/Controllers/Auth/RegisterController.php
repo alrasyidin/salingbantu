@@ -71,6 +71,14 @@ class RegisterController extends Controller
             'username' => $data['username'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'avatar' => 'default.png'
         ]);
     }
+
+    public function showRegistrationForm()
+    {
+        return view('app.dashboard.auth.register');
+    }
+
+
 }

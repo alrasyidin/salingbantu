@@ -78,4 +78,12 @@ class LoginController extends Controller
             ]
         );
     }
+
+    // Change default login form
+
+    public function showLoginForm()
+    {
+        return view('app.dashboard.auth.login');
+    }
+
 }
