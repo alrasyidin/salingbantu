@@ -4,7 +4,7 @@
 <section class="login_area section--padding">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
+            <div class="col-lg-9 col-md-8 offset-md-2">
                 @if(session()->has('info'))
                 <div class="alert alert-primary">
                     {{ session()->get('info') }}
@@ -18,7 +18,6 @@
                 <div class="cardify signup_form">
                     <div class="login--header">
                             <h1>{{ __('Verify Your Email Address') }}</h1>
-                            <h4>{{ __('Oopsss !!') }}</h4>
                         </p>
                     </div>
                     <div class="login--form">
