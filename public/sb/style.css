@@ -1257,43 +1257,43 @@ ul.nav-tabs li a a:focus,
 ul.nav-tabs li a a:active,
 ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hover, .timeline .happening:hover .happening--period p, .alert.alert-default, .alert.alert-default .close, .btn.btn--white, .btn-light, .btn--light,
 .btn.btn--white:hover, .btn-light:hover, .btn--light:hover, .card_style1 .card_style1__info .date_place li span, .card_style1 .card_style1__info figcaption a:hover h3, .card_style1 .card_style1__info figcaption a:hover h4, .card_style2 .card_style2__location_type p span, .card_style2 a, .card_style2 .save_job span, div#ui-datepicker-div tbody tr td a:hover, .dropdown li a:hover, .dropdown.messaging_dropdown li a:hover, .dropdown.messaging--dropdown .message .message_data .name_time .name span, .dropdown.messaging--dropdown .message.recent .time, .dropdown.dropdown--cart .cart_area .cart_product .product__action span, .dropdown.dropdown--cart .cart_area .cart_product .product__action p, .dropdown.dropdown--menu ul li a:hover, .megamnu_module .menu_items .menu_column li a:hover, .custom_dropdown li a:hover, .single_feature .feature__icon span, .table tbody > tr > td.detail a, .table tbody > tr > td.earning, .price-ranges span, .dashboard_module .loading a:hover, .country_statistics table tbody tr td:last-child, .recent_sells .single_sell .ammount p:last-child, .popular_sells .single_sell .ammount p:last-child, .recent_buyers .single_buyer .price, .product_archive.added_to__cart .short_desc a:hover h4, .single_product .product__description .short_desc h5 a:hover, .single_product .license p, .single_product .product__price_download .item_action .remove_from_cart span, .rating_modal .modal-header P a, .dashboard-edit .product .prod_option .options ul li a:hover, .withdraw_module .modules__content .subtitle a, .withdraw_module .option-single .op_action .ac_btn .dropdown-menu .dropdown-item:hover, .product-single .product-thumb figure .prod_option .options ul li a:hover, .product-single .product-thumb figure figcaption ul li a, .product-excerpt h3 a:hover, .product-excerpt ul.titlebtm li a:hover, .product-excerpt .product-facts li.price, .item-preview--activity .activity-single p span, .thread .thread-list .single-thread .media-body a.reply-link, .support .support__form .usr-msg p a, .more_product_area .section-title h2 span, .hero-area4 .hero-content .hero__content__title h1 span, .gradient_overlay .hero__content__title h1 span, .product-sorting ul li span, .product-sorting ul li a:hover, .product-sorting ul li.active a, .latest-single .product-excerpt h5 a:hover, .service-single span, .step-single .step-count span:first-child, .filter-bar .filter--text a:hover, .author-profile .author-stats ul .t_items span, .tab-pane h3 span, .tab-pane .author_featured_items h2 span, .user-single .card-footer .stats p span, .notifications_module .notification .notification__info .info p a, .notifications_module .notification .notification__icons .noti_icon.loved, .messaging_sidebar .messaging__header .messaging_menu .dropdown a:hover, .messaging_sidebar .messaging__header .messaging_action a, .messaging_sidebar .messaging__contents .messages .message_data .name span, .messaging_sidebar .messaging__contents .messages .message_data .time, .chat_area .chat_area--title h3 span, .chat_area .chat_area--title .message_toolbar a:hover span, .chat_area .chat_area--conversation .body .attachments .attachment_head a, .chat_area .message_composer .attached p, .chat_area .message_composer .attached-files li a, .chat_area .message_composer .btns label, .chat_area .message_composer .btns .form-group p.label, .form-group .chat_area .message_composer .btns p.label, .chat_area .message_composer .btns label span, .chat_area .message_composer .btns .form-group p.label span, .form-group .chat_area .message_composer .btns p.label span, .cart_area tbody .item_action .remove_from_cart span, .order_summary ul li.item a, .about_mission .content_area h1 span, .about_mission .content_block2 .content_area2 h1 span, .content_block2 .about_mission .content_area2 h1 span, .faq-area .faq-box .faq-head h4, .faq-area .faq-box .faq-content ul li a:hover, .affliate_rule_module .affiliate_title span.lnr-checkmark-circle, .affliate_rule_module .collapsible-content ul li a:hover, .contact_tile .tiles__icon, .job_hero_area h1 .highlight, .event_details_intro h1 .highlight, .content_block5 .content_block5_content h1 span, .job_detail_module .job__content .social-share ul li a:hover, .job_detail_module.information .job__title, .cv_upload .up_icon, .event_details_intro .social-share ul li a:hover, .event_module .list_item li:before, .google_map .location_address .addres_module p span, .single_blog .blog__title:hover h3, .blog--card .blog__title h4:hover, .blog--card .blog__meta .date_time span, .single_blog_content .share_tags .share .social_share ul li a:hover, .single_blog_content .share_tags .tags ul li a, .author_info .author__info ul a:hover {
-  color: #3679A3;
+  color: #6E4FF6;
 }
 
 .bg-primary, .primarybg, .product-title-area .date_area .btn:hover, .dashboard_contents .dashboard_title_area .date_area .btn:hover, .go_top, .testimonial-area .owl-controls .owl-prev:hover, .testimonial-area .owl-controls .owl-next:hover, .breadcrumb-area, .menu--style1 .mainmenu, .menu--style1 .mainmenu__menu, .author-area__seller-btn, .author__notification_area ul li .notification_count.purch, .sidebar-card.card--pricing2 .price, .card--pricing2.item-preview .price, .support--sidebar .login_promot, .faq--sidebar .login_promot, .affliate_rule_module .login_promot, .sidebar--blog .login_promot, ul.nav-tabs li a:before, .team-single figure:hover figcaption span.member-title, .timeline:after, .timeline .happening:hover .happening--period:before, .accordion .card .single_acco_title a.active,
 .accordion .accordion__single .single_acco_title a.active, div#ui-datepicker-div .ui-datepicker-header, .dropdown.dropdown--author ul li a:hover, .has_dropdown .btn:focus, .select2-container--default .select2-selection--multiple .select2-selection__choice, .custom-checkbox2 label span.square:before, .custom-radio label span.square:before, .custom-checkbox2 .form-group p.label span.square:before, .form-group .custom-checkbox2 p.label span.square:before, .custom-radio .form-group p.label span.square:before, .form-group .custom-radio p.label span.square:before, .custom-radio label span.circle:before, .custom-radio .form-group p.label span.circle:before, .form-group .custom-radio p.label span.circle:before, .custom_checkbox label .shadow_checkbox:before, .custom_checkbox .form-group p.label .shadow_checkbox:before, .form-group .custom_checkbox p.label .shadow_checkbox:before, .package-single.featured-plan .featured-badge, .table tbody > tr > td.action a:hover, .table.withdraw__table .pending > span, .range-slider.ui-slider .ui-slider-range, .credit_modules .modules__content .amounts ul li p.selected, .shortcode_modules .modules__content .amounts ul li p.selected, .upload_modules .modules__content .amounts ul li p.selected, .withdraw_module .modules__content .amounts ul li p.selected, .dashboard-edit .product .prod_option .setting-icon, .withdraw_module .option-single .op_action .ac_btn .dropdown-toggle:hover, .withdraw_module .option-single .op_action .ac_btn .dropdown-toggle:focus, .product-single .product-thumb figure .prod_option .setting-icon, .item-preview .prev-nav span:hover, .thread .thread-list .single-thread .media-body .comment-tag.author, .intro-area, .product-slide-area .owl-nav .owl-prev:hover, .product-slide-area .owl-nav .owl-next:hover, .nav__product-list li a:hover, .nav__product-list li a.active, .notifications_module .notification .line, .notifications_module .notification .line:before, .notifications_module .notification .line:after, .messaging_sidebar .messaging__header, .messaging_sidebar .messaging__contents .messages .message.active:before, .content_block3 .area_content a:hover, .content_block4 .area_content a:hover, .single_speaker .speaker_social ul li a:hover span {
-  background: #3679A3;
+  background: #6E4FF6;
 }
 
 .iborder-primary {
-  color: #3679A3;
+  color: #6E4FF6;
 }
 
 .outline-primary {
-  border: 1px solid #3679A3;
-  color: #3679A3;
+  border: 1px solid #6E4FF6;
+  color: #6E4FF6;
 }
 
 .active-color-primary label input:checked + span, .active-color-primary .form-group p.label input:checked + span, .form-group .active-color-primary p.label input:checked + span {
-  background: #3679A3;
-  border-color: #3679A3;
+  background: #6E4FF6;
+  border-color: #6E4FF6;
 }
 
 .circle-primary {
-  color: #3679A3;
+  color: #6E4FF6;
   background: rgba(110, 79, 246, 0.1);
 }
 
 .border-primary {
-  border: 1px solid #3679A3;
+  border: 1px solid #6E4FF6;
 }
 
 .b-primary, select:focus {
-  border-color: #3679A3 !important;
+  border-color: #6E4FF6 !important;
 }
 
 .b-bottom-10-primary {
-  border-bottom: 10px solid #3679A3;
+  border-bottom: 10px solid #6E4FF6;
 }
 
 .color-secondary, .secondary, .dwqa-container .dwqa-questions-archive .dwqa-questions-list .dwqa-question-meta span.dwqa-status.dwqa-status-resolved:before, .mini-footer p a:hover, .widget-about .contact-details li a:hover, .breadcrumb ul li a:hover, .breadcrumb ul li.active a:hover, .menu--light .mainmenu__menu .navbar-nav > li:hover > a, .product-desc ul li.product_cat a, .product-purchase .price_love p span, .product-meta .love-comments p span.lnr, .card_style2 .save_job:hover span, .dropdown.dropdown--author .author-credits .autor__info .amount, .dropdown.dropdown--cart .cart_area .cart_product .product__info .info .title:hover, .dropdown.dropdown--cart .cart_area .cart_product .product__info .info .cat a, .package-single .package-header .amount span, .package-single .package-body ul li.yes:before, .table tbody > tr > td.earning.subtract, .dashboard_module .loading a, .country_statistics table tbody tr td:nth-child(2), .single_item_visitor .dashboard__content .item_info .info h2, .single_product .product__additional_info ul li a:hover, .single_product .product__price_download .item_action .not--rated:hover .rate_it, .credit_modules .modules__content .amounts .or, .shortcode_modules .modules__content .amounts .or, .upload_modules .modules__content .amounts .or, .withdraw_module .modules__content .amounts .or, .invoice .invoice__meta .date_info p.status, .thread .thread-list .single-thread .media-body a.reply-link:hover, .thread.thread_review .thread-list .single-thread .media-body .media-heading .rev_item, .step-single .step-last span:last-child, .author-profile .author-stats ul .t_sells span, .user-single .card-footer .stats p:last-child span, .notifications_module .notification__unread .info p.time, .notifications_module .notification .notification__icons .noti_icon.commented, .notifications_module .notification .notification__icons .noti_icon.reviewed, .notifications_module .notification .notification__icons span.icon-close:hover, .about_hero .about_hero_contents h1 span, .affiliate_area .generated .link, .login .login_assist p a, .signup_form .login_assist p a, .recover_pass .login_assist p a, .job_detail_module .job__content .informations li .info_title span, .event_area .date_place span, .featured_event h2 a:hover, .featured_event .date_place li span, .featured_event .countdown li {
@@ -1606,7 +1606,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-top-0-primary {
-  border-top: 0px solid #3679A3;
+  border-top: 0px solid #6E4FF6;
 }
 
 .b-top-0-secondary {
@@ -1638,7 +1638,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-top-1-primary, .custom_dropdown {
-  border-top: 1px solid #3679A3;
+  border-top: 1px solid #6E4FF6;
 }
 
 .b-top-1-secondary {
@@ -1670,7 +1670,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-top-2-primary {
-  border-top: 2px solid #3679A3;
+  border-top: 2px solid #6E4FF6;
 }
 
 .b-top-2-secondary {
@@ -1702,7 +1702,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-top-3-primary {
-  border-top: 3px solid #3679A3;
+  border-top: 3px solid #6E4FF6;
 }
 
 .b-top-3-secondary {
@@ -1734,7 +1734,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-top-4-primary {
-  border-top: 4px solid #3679A3;
+  border-top: 4px solid #6E4FF6;
 }
 
 .b-top-4-secondary {
@@ -1766,7 +1766,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-top-5-primary {
-  border-top: 5px solid #3679A3;
+  border-top: 5px solid #6E4FF6;
 }
 
 .b-top-5-secondary {
@@ -1798,7 +1798,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-right-0-primary {
-  border-right: 0px solid #3679A3;
+  border-right: 0px solid #6E4FF6;
 }
 
 .b-right-0-secondary {
@@ -1830,7 +1830,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-right-1-primary {
-  border-right: 1px solid #3679A3;
+  border-right: 1px solid #6E4FF6;
 }
 
 .b-right-1-secondary {
@@ -1862,7 +1862,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-right-2-primary {
-  border-right: 2px solid #3679A3;
+  border-right: 2px solid #6E4FF6;
 }
 
 .b-right-2-secondary {
@@ -1894,7 +1894,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-right-3-primary {
-  border-right: 3px solid #3679A3;
+  border-right: 3px solid #6E4FF6;
 }
 
 .b-right-3-secondary {
@@ -1926,7 +1926,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-right-4-primary {
-  border-right: 4px solid #3679A3;
+  border-right: 4px solid #6E4FF6;
 }
 
 .b-right-4-secondary {
@@ -1958,7 +1958,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-right-5-primary {
-  border-right: 5px solid #3679A3;
+  border-right: 5px solid #6E4FF6;
 }
 
 .b-right-5-secondary {
@@ -1990,7 +1990,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-bottom-0-primary {
-  border-bottom: 0px solid #3679A3;
+  border-bottom: 0px solid #6E4FF6;
 }
 
 .b-bottom-0-secondary {
@@ -2022,7 +2022,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-bottom-1-primary {
-  border-bottom: 1px solid #3679A3;
+  border-bottom: 1px solid #6E4FF6;
 }
 
 .b-bottom-1-secondary {
@@ -2054,7 +2054,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-bottom-2-primary, .dashboard_purchase .dashboard_menu li.active a {
-  border-bottom: 2px solid #3679A3;
+  border-bottom: 2px solid #6E4FF6;
 }
 
 .b-bottom-2-secondary {
@@ -2086,7 +2086,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-bottom-3-primary {
-  border-bottom: 3px solid #3679A3;
+  border-bottom: 3px solid #6E4FF6;
 }
 
 .b-bottom-3-secondary {
@@ -2118,7 +2118,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-bottom-4-primary {
-  border-bottom: 4px solid #3679A3;
+  border-bottom: 4px solid #6E4FF6;
 }
 
 .b-bottom-4-secondary {
@@ -2150,7 +2150,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-bottom-5-primary {
-  border-bottom: 5px solid #3679A3;
+  border-bottom: 5px solid #6E4FF6;
 }
 
 .b-bottom-5-secondary {
@@ -2182,7 +2182,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-left-0-primary {
-  border-left: 0px solid #3679A3;
+  border-left: 0px solid #6E4FF6;
 }
 
 .b-left-0-secondary {
@@ -2214,7 +2214,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-left-1-primary {
-  border-left: 1px solid #3679A3;
+  border-left: 1px solid #6E4FF6;
 }
 
 .b-left-1-secondary {
@@ -2246,7 +2246,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-left-2-primary {
-  border-left: 2px solid #3679A3;
+  border-left: 2px solid #6E4FF6;
 }
 
 .b-left-2-secondary {
@@ -2278,7 +2278,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-left-3-primary, blockquote, .blockquote {
-  border-left: 3px solid #3679A3;
+  border-left: 3px solid #6E4FF6;
 }
 
 .b-left-3-secondary {
@@ -2310,7 +2310,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-left-4-primary {
-  border-left: 4px solid #3679A3;
+  border-left: 4px solid #6E4FF6;
 }
 
 .b-left-4-secondary {
@@ -2342,7 +2342,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-left-5-primary {
-  border-left: 5px solid #3679A3;
+  border-left: 5px solid #6E4FF6;
 }
 
 .b-left-5-secondary {
@@ -2374,7 +2374,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 }
 
 .b-0-primary {
-  border: 0px solid #3679A3 !important;
+  border: 0px solid #6E4FF6 !important;
 }
 
 .b-0-secondary {
@@ -2407,7 +2407,7 @@ ul.nav-tabs li a a:hover, .team-single figure figcaption ul.team-social li a:hov
 
 .b-1-primary, input:focus, input:active, input.form-control:focus, input.form-control:active, select:focus,
 select:active, select.form-control:focus, select.form-control:active, .form-control:focus, .form-control:active, textarea:focus, textarea:active, .table tbody > tr > td.action a {
-  border: 1px solid #3679A3 !important;
+  border: 1px solid #6E4FF6 !important;
 }
 
 .b-1-secondary, .single_product .product__price_download .item_action .rating--btn {
@@ -2439,7 +2439,7 @@ select:active, select.form-control:focus, select.form-control:active, .form-cont
 }
 
 .b-2-primary {
-  border: 2px solid #3679A3 !important;
+  border: 2px solid #6E4FF6 !important;
 }
 
 .b-2-secondary {
@@ -2471,7 +2471,7 @@ select:active, select.form-control:focus, select.form-control:active, .form-cont
 }
 
 .b-3-primary {
-  border: 3px solid #3679A3 !important;
+  border: 3px solid #6E4FF6 !important;
 }
 
 .b-3-secondary {
@@ -2503,7 +2503,7 @@ select:active, select.form-control:focus, select.form-control:active, .form-cont
 }
 
 .b-4-primary {
-  border: 4px solid #3679A3 !important;
+  border: 4px solid #6E4FF6 !important;
 }
 
 .b-4-secondary {
@@ -2535,7 +2535,7 @@ select:active, select.form-control:focus, select.form-control:active, .form-cont
 }
 
 .b-5-primary {
-  border: 5px solid #3679A3 !important;
+  border: 5px solid #6E4FF6 !important;
 }
 
 .b-5-secondary {
@@ -2615,9 +2615,9 @@ select:active, select.form-control:focus, select.form-control:active, .form-cont
 }
 
 .outline-lg-primary {
-  border: 2px solid #3679A3;
+  border: 2px solid #6E4FF6;
   background: none;
-  color: #3679A3;
+  color: #6E4FF6;
 }
 
 .outline-lg-secondary {
@@ -2663,12 +2663,12 @@ select:active, select.form-control:focus, select.form-control:active, .form-cont
 }
 
 .checkbox-primary .custom-control-label::before {
-  background: #3679A3;
+  background: #6E4FF6;
 }
 
 .checkbox-primary .custom-control-input:checked ~ .custom-control-label::before {
-  background: #3679A3;
-  border: 1px solid #3679A3;
+  background: #6E4FF6;
+  border: 1px solid #6E4FF6;
 }
 
 .checkbox-primary .custom-control-input:checked ~ .custom-control-label::after {
@@ -2771,8 +2771,8 @@ select:active, select.form-control:focus, select.form-control:active, .form-cont
 }
 
 .checkbox-outline-primary .custom-control-input:checked ~ .custom-control-label::before {
-  border: 1px solid #3679A3;
-  background: #3679A3;
+  border: 1px solid #6E4FF6;
+  background: #6E4FF6;
 }
 
 .checkbox-outline-primary .custom-control-input:checked ~ .custom-control-label::after {
@@ -3575,7 +3575,7 @@ span.slick-next {
 }
 
 .testimonial-area .owl-controls .owl-prev:hover, .testimonial-area .owl-controls .owl-next:hover {
-  border-color: #3679A3;
+  border-color: #6E4FF6;
   color: #fff;
 }
 
@@ -3811,7 +3811,7 @@ span.slick-next {
 }
 
 .dwqa-container .dwqa-questions-archive .dwqa-questions-list .dwqa-question-meta span.dwqa-status.dwqa-status-answered {
-  border-color: #3679A3;
+  border-color: #6E4FF6;
 }
 
 .dwqa-container .dwqa-questions-archive .dwqa-questions-list .dwqa-question-meta span.dwqa-status.dwqa-status-answered:before {
@@ -4938,7 +4938,7 @@ changing this file will result on change of menu containing modifier class .menu
   border-radius: 4px 4px 0 0;
   width: 100%;
   top: 0;
-  background: linear-gradient(to left, #1DC9B7, #3679A3);
+  background: linear-gradient(to left, #1DC9B7, #6E4FF6);
   left: 0;
 }
 
@@ -5891,7 +5891,7 @@ changing this file will result on change of menu containing modifier class .menu
 
 .banner:before {
   content: '';
-  background: linear-gradient(to left, #1DC9B7, #3679A3);
+  background: linear-gradient(to left, #1DC9B7, #6E4FF6);
   position: absolute;
   height: 100%;
   width: 100%;
@@ -6177,7 +6177,7 @@ ul.nav-tabs.nav--tabs2 li a:before {
 }
 
 .team-single figure figcaption ul.team-social li a:hover {
-  stroke: #3679A3;
+  stroke: #6E4FF6;
 }
 
 /*
@@ -7579,7 +7579,7 @@ textarea, textarea.text_field, textarea.form-control {
 }
 
 .toggle-switch input:checked + .slider {
-  background-color: #3679A3;
+  background-color: #6E4FF6;
 }
 
 .toggle-switch input:checked + .slider:before {
@@ -10671,7 +10671,7 @@ this file contains style for different social sharing option and icon style
 
 .product-single .product-thumb figure:hover figcaption {
   visibility: visible;
-  background: rgba(54, 121, 163);
+  background: rgba(88, 103, 221, 0.9);
 }
 
 .product-single .product-thumb figure:hover figcaption ul {
