@@ -10,7 +10,7 @@ use App\Models\Transaction;
 class HomeDashboardController extends Controller
 {
     public function index(){
-        return view('dashboard.index',[
+        return view('app.dashboard.index',[
             'campaigns' => $this->getCampaignData(),
             'amount' => $this->amount(\Auth::user()->id)
         ]);
@@ -43,7 +43,7 @@ class HomeDashboardController extends Controller
     public function getTransaction(Request $request){
         if($request->ajax()){
             $transactions = Transaction::where('user_id',"=",\Auth::user()->id)->orderBy('created_at','desc')->paginate(5);
-            return view('dashboard.parts.transactiondata',compact('transactions'))->render();
+            return view('app.dashboard.parts.transactiondata',compact('transactions'))->render();
         }
     }
 }

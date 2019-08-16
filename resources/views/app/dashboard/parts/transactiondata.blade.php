@@ -1,5 +1,4 @@
-@if (!$transactions->isEmpty())
-<table class="table table-hover">
+<table class="table withdraw__table">
     <thead>
         <tr>
             <th scope="col">#</th>
@@ -11,6 +10,7 @@
         </tr>
     </thead>
     <tbody>
+        @if (!$transactions->isEmpty())
         @foreach ($transactions as $nom => $transaction)
         <tr>
             <td data-label="No">{{$nom+1}}</td>
@@ -23,21 +23,14 @@
             </td>
         </tr>
         @endforeach
+        @else
+        <tr>
+            <td colspan="6">Tidak terdapat transaksi</td>
+        </tr>
+        @endif
     </tbody>
 </table>
-@else
-<div class="empty-state" data-height="400" style="height: 400px;">
-    <div class="empty-state-icon">
-        <i class="fas fa-question"></i>
-    </div>
-    <h2>We couldn't find any data</h2>
-    <p class="lead">
-        Sorry we can't find any data, to get rid of this message, make at least 1 entry.
-    </p>
-    <a href="{{route('create.campaign')}}" class="btn btn-primary mt-4">Create new One</a>
-    <a href="#" class="mt-4 bb">Need Help?</a>
-</div>
-@endif
+
 <div class="float-right">
     {!! $transactions->render() !!}
 </div>
