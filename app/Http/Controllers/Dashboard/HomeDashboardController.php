@@ -37,7 +37,7 @@ class HomeDashboardController extends Controller
     }
 
     public function amount($id){
-        return Transaction::where('user_id',"=",$id)->sum('amount');
+        return Transaction::where([['user_id',"=",$id],['status','=','3']])->sum('amount');
     }
 
     public function getTransaction(Request $request){

@@ -26,3 +26,8 @@ if (!function_exists('trs_sts')){
         }
     }
 }
+if (!function_exists('setActive')){
+function setActive($path, $active = 'active'){
+    return call_user_func_array('Request::is', (array) $path) ? $active : '';
+  }
+}
