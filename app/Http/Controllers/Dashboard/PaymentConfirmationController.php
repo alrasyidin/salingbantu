@@ -17,7 +17,7 @@ class PaymentConfirmationController extends Controller
         $creditaccounts = CreditAccount::where('user_id',\Auth::user()->id)->get();
         $admincreditaccounts = AdminCreditAccount::all();
         $transaction = Transaction::where('id','=',$id)->firstOrfail();
-        return view('dashboard.paymentconfirmation.index',compact('creditaccounts','admincreditaccounts','transaction'));
+        return view('app.dashboard.paymentconfirmation.index',compact('creditaccounts','admincreditaccounts','transaction'));
     }
 
     public function store(Request $request){

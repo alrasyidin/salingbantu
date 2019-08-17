@@ -19,7 +19,7 @@
             <td data-label="kategori">{{str_rp($transaction->amount)}}</td>
             <td data-label="Status">{!!trs_sts($transaction->status)!!}</td>
             <td data-label="Action">
-                <a href="" class="btn btn-danger btn-sm"><i class="fas fa-envelope"></i> Konfirmasi </a>
+                <a href="{{route('confirmpayment',['id' => $transaction->id] ) }}" class="btn btn-danger btn-sm"><i class="fas fa-envelope"></i> Konfirmasi </a>
             </td>
         </tr>
         @endforeach

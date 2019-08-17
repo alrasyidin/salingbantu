@@ -44,6 +44,7 @@
 
     </section><!-- ends: .dashboard-area -->
 @endsection
+
 @section('customjs')
 <script>
     $(document).ready(function(){
