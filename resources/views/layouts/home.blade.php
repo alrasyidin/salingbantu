@@ -7,6 +7,11 @@
     @include('layouts.parts.navigation')
     @yield('content')
     @include('layouts.parts.footer')
+
+
+    @if (!empty($modal))
+      @include('layouts.admin.parts.modal')
+    @endif
 </body>
 
 </html>

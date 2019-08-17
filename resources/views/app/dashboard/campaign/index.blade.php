@@ -1,31 +1,33 @@
-@extends('layouts.admin.dashboard')
-@section('title','Dashboard')
-@section('main-content')
-<section class="section">
-    <div class="section-header">
-        <h1>Campaign Saya</h1>
-        <div class="section-header-breadcrumb">
-            <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
-            <div class="breadcrumb-item"><a href="#">Layout</a></div>
-            <div class="breadcrumb-item">Default Layout</div>
-        </div>
-    </div>
-    @include('layouts.flash-msg')
+@extends('layouts.home')
+@section('title','Dashoard User')
+@section('content')
+    @include('app.dashboard.parts.breadcrumb')
+    <section class="dashboard-area">
+        @include('app.dashboard.parts.menubar')
+        <div class="dashboard_contents p-top-100 p-bottom-70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                            <div id="alert-container"></div>
 
-    <div class="section-body">
-        <div class="card">
-            <div class="card-header">
-                <h4>Pilih salah satu campaign Anda</h4> <a href="{{route('create.campaign')}}"
-                    class="mr-2 btn btn-primary">Tambahkan Campaign</a>
-            </div>
-            <div class="card-body">
-                    <div id="alert-container"></div>
-
-                <div id="data-display"></div>
-                
-            </div>
-        </div>
-</section>
+                        <div class="withdraw_module withdraw_history bg-white">
+                                <div class="withdraw_table_header">
+                                    <div class="row">
+                                        <div class="col-md-10">
+                                                <h4 class="mx-auto">Pilih salah satu campaign Anda</h4>
+                                        </div>
+                                        <div class="col-md-2">
+                                                <a href="{{route('create.campaign')}}" class="btn btn-primary">Tambahkan</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="data-display"></div>
+                            </div>
+                    </div>
+                </div><!-- ends: .row -->
+            </div><!-- ends: .container -->
+        </div><!-- ends: .dashboard_menu_area -->
+    </section><!-- ends: .dashboard-area -->
 @endsection
 
 @section('customjs')

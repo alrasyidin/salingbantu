@@ -4,11 +4,11 @@ namespace App\Http\Controllers\Dashboard;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use File;
-use Image;
+use Illuminate\Support\Facades\Storage;
 use App\Models\Campaign;
 use App\Models\CampaignImage;
-
+use File;
+use Image;
 class CampaignController extends Controller
 {
     public function __construct()
@@ -23,13 +23,13 @@ class CampaignController extends Controller
      */
     public function index()
     {
-        return view('dashboard.campaign.index');
+        return view('app.dashboard.campaign.index');
     }
 
     public function data(Request $request){
         if($request->ajax()){
             $campaigns = Campaign::where('user_id',"=",\Auth::user()->id)->orderBy('created_at','desc')->paginate(5);
-            return view('dashboard.campaign.data',compact('campaigns'))->render();
+            return view('app.dashboard.campaign.data',compact('campaigns'))->render();
         }
     }
 
@@ -44,12 +44,12 @@ class CampaignController extends Controller
         if(!empty($slug)){
             $campaign = Campaign::where('slug',$slug)->with('images')->firstOrFail();
             if(\Auth::user()->can('update', $campaign)){
-                return view('dashboard.campaign.form',compact('campaign'));
+                return view('app.dashboard.campaign.form',compact('campaign'));
             }else{
                 return abort(401);
             }
         }
-        return view('dashboard.campaign.form');
+        return view('app.dashboard.campaign.form');
     }
 
     /**
@@ -190,8 +190,18 @@ class CampaignController extends Controller
     public function destroy($id)
     {
         $campaign = Campaign::findOrFail($id);
+        $images = CampaignImage::where('campaign_id','=',$id)->get();
+
+
+
         if(\Auth::user()->can('delete', $campaign)){
             $campaign->delete();
+            foreach($images as $image){
+                Storage::delete('public/campaign_images/'.$image->path);
+                Storage::delete('public/campaign_images/60/'.$image->path);
+                Storage::delete('public/campaign_images/300/'.$image->path);
+            }
+            $image->delete();
             return response()->json([
                 'status' => 1,
                 'pesan' => 'Data telah berhasil dihapus'
