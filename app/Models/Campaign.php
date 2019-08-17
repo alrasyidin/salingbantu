@@ -5,14 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Traits\Uuids;
-use Laravel\Scout\Searchable;
 
 
 class Campaign extends Model
 {
     use SoftDeletes;
     use Uuids;
-    use Searchable;
 
     public $incrementing = false;
     protected $keyType = 'string';
@@ -24,7 +22,7 @@ class Campaign extends Model
     public function images() {
         return $this->hasMany('App\Models\CampaignImage');
     }
-    
+
     public function user()
     {
         return $this->belongsTo('App\Models\User');
@@ -33,25 +31,25 @@ class Campaign extends Model
 
     // public $asYouType = true;
 
-    public function SearchableAs()
-    {
-        return 'campaign_index';
-    }
+    // public function SearchableAs()
+    // {
+    //     return 'campaign_index';
+    // }
 
-    protected $searchable = [
-        'name',
-        'description'
-    ];
+    // protected $searchable = [
+    //     'name',
+    //     'description'
+    // ];
 
-    public function toSearchableArray()
-    {
-        $array = [
-            'id' => $this->id,
-            'title' => $this->title,
-            'description' => $this->description,
-		];
- 	    return $array;
-    }
+    // public function toSearchableArray()
+    // {
+    //     $array = [
+    //         'id' => $this->id,
+    //         'title' => $this->title,
+    //         'description' => $this->description,
+	// 	];
+ 	//     return $array;
+    // }
 
     public function transaction()
     {
