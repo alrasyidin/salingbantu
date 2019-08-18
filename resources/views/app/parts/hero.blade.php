@@ -1,6 +1,6 @@
 <section class="hero-area2 bgimage">
         <div class="bg_image_holder">
-            <img src="{{asset('apps/img/hero-image01.png')}}" alt="background-image">
+            <img src="{{asset('sb/img/hero-image01.png')}}" alt="background-image">
         </div>
         <div class="hero-content content_above">
             <div class="content-wrapper">

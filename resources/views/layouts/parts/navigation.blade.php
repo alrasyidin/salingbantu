@@ -7,7 +7,7 @@
                         <div class="menu-fullwidth">
                             <div class="logo-wrapper">
                                 <div class="logo logo-top">
-                                    <a href="{{url('/')}}"><img src="{{asset('apps/img/logo.png')}}" alt="logo image"
+                                    <a href="{{url('/')}}"><img src="{{asset('img/salingbantu.png')}}" alt="logo image"
                                             class="img-fluid"></a>
                                 </div>
                             </div>
@@ -24,17 +24,23 @@
                                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                             <ul class="navbar-nav">
                                                 <li class="has_dropdown">
-                                                    <a href="index.html">Home</a>
+                                                    <a href="{{url('/')}}">Home</a>
                                                     <div class="dropdown dropdown--menu">
                                                         <ul>
                                                             <li>
-                                                                <a href="index.html">Home Multi Vendor</a>
+                                                                <a href="#">Simple Dropdown</a>
                                                             </li>
                                                         </ul>
                                                     </div>
                                                 </li>
                                                 <li>
-                                                    <a href="contact.html">contact</a>
+                                                    <a href="#">Menu 1</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Menu 2</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Menu 3</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -74,7 +80,7 @@
                                                         <div class="notification">
                                                             <div class="notification__info">
                                                                 <div class="info_avatar">
-                                                                    <img src="{{asset('apps/img/notification_head.png')}}"
+                                                                    <img src="{{asset('sb/img/notification_head.png')}}"
                                                                         alt="">
                                                                 </div>
                                                                 <div class="info">
@@ -95,7 +101,7 @@
                                                         <div class="notification">
                                                             <div class="notification__info">
                                                                 <div class="info_avatar">
-                                                                    <img src="{{asset('img/notification_head2.png')}}"
+                                                                    <img src="{{asset('sb/img/notification_head2.png')}}"
                                                                         alt="">
                                                                 </div>
                                                                 <div class="info">
@@ -176,7 +182,7 @@
                                                         <a href="message.html" class="message">
                                                             <div class="message__actions_avatar">
                                                                 <div class="avatar">
-                                                                    <img src="img/notification_head4.png" alt="">
+                                                                    <img src="{{asset('sb/img/notification_head4.png')}}" alt="">
                                                                 </div>
                                                             </div>
                                                             <!-- end /.actions -->
@@ -250,7 +256,7 @@
                                         <span class="icon-close close_menu"></span>
                                         <div class="author-author__info">
                                             <div class="author__avatar v_middle">
-                                                <img src="img/user-avater.png" alt="user avatar">
+                                                <img src="{{asset('sb/img/user-avater.png')}}" alt="user avatar">
                                             </div>
                                         </div>
                                         <!--end /.author-author__info-->
