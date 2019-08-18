@@ -10,7 +10,7 @@
     <!-- inject:css-->
     <link rel="stylesheet" href="{{asset('sb/vendor_assets/css/bootstrap/bootstrap.css?v=1')}}">
     <link rel="stylesheet" href="{{asset('sb/vendor_assets/css/animate.css')}}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+    <link rel="stylesheet" href="{{asset('sb/vendor_assets/css/font-awesome.min.css')}}">
     <link rel="stylesheet" href="{{asset('sb/vendor_assets/css/jquery-ui.css')}}">
     <link rel="stylesheet" href="{{asset('sb/vendor_assets/css/magnific-popup.css')}}">
     <link rel="stylesheet" href="{{asset('sb/vendor_assets/css/owl.carousel.css')}}">

@@ -6,19 +6,14 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="footer-widget">
                             <div class="widget-about">
-                                <img src="img/footer-logo.png" alt="" class="img-fluid">
-                                <p>Pellentesque facilisis the ullamcorp keer sapien interdum is the magna pellentesque
-                                    kequis
-                                    hasellus keur condimentum eleifend.</p>
+                                <a href="{{url('/')}}"><img src="{{asset('img/salingbantu.png')}}" alt="logo image"
+                                    class="img-fluid"></a>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat..</p>
                                 <ul class="contact-details">
                                     <li>
                                         <span class="icon-earphones"></span>
                                         Call Us:
-                                        <a href="tel:344-755-111">344-755-111</a>
-                                    </li>
-                                    <li>
-                                        <span class="icon-envelope-open"></span>
-                                        <a href="mailto:support@aazztech.com">support@aazztech.com</a>
+                                        <a href="tel:344-755-111">088-123-456</a>
                                     </li>
                                 </ul>
                             </div>
@@ -29,22 +24,28 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="footer-widget">
                             <div class="footer-menu footer-menu--1">
-                                <h5 class="footer-widget-title">Popular Category</h5>
+                                <h5 class="footer-widget-title">Help Support</h5>
                                 <ul>
                                     <li>
-                                        <a href="#">Wordpress</a>
+                                        <a href="#">Support Forum</a>
                                     </li>
                                     <li>
-                                        <a href="#">Plugins</a>
+                                        <a href="#">Terms & Conditions</a>
                                     </li>
                                     <li>
-                                        <a href="#">Joomla Template</a>
+                                        <a href="#">Support Policy</a>
                                     </li>
                                     <li>
-                                        <a href="#">Admin Template</a>
+                                        <a href="#">Refund Policy</a>
                                     </li>
                                     <li>
-                                        <a href="#">HTML Template</a>
+                                        <a href="#">FAQs</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Buyers Faq</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sellers Faq</a>
                                     </li>
                                 </ul>
                             </div>
@@ -56,28 +57,28 @@
                     <div class="col-lg-3 col-sm-6">
                         <div class="footer-widget">
                             <div class="footer-menu">
-                                <h5 class="footer-widget-title">Our Company</h5>
+                                <h5 class="footer-widget-title">Help Support</h5>
                                 <ul>
                                     <li>
-                                        <a href="#">About Us</a>
+                                        <a href="#">Support Forum</a>
                                     </li>
                                     <li>
-                                        <a href="#">How It Works</a>
+                                        <a href="#">Terms & Conditions</a>
                                     </li>
                                     <li>
-                                        <a href="#">Affiliates</a>
+                                        <a href="#">Support Policy</a>
                                     </li>
                                     <li>
-                                        <a href="#">Testimonials</a>
+                                        <a href="#">Refund Policy</a>
                                     </li>
                                     <li>
-                                        <a href="#">Contact Us</a>
+                                        <a href="#">FAQs</a>
                                     </li>
                                     <li>
-                                        <a href="#">Plan & Pricing</a>
+                                        <a href="#">Buyers Faq</a>
                                     </li>
                                     <li>
-                                        <a href="#">Blog</a>
+                                        <a href="#">Sellers Faq</a>
                                     </li>
                                 </ul>
                             </div>

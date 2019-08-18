@@ -7,13 +7,20 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Campaign;
 use App\Models\CampaignImage;
+use App\Notifications\CampaignPublished;
 use File;
 use Image;
 class CampaignController extends Controller
 {
+
     public function __construct()
     {
         $this->middleware(['auth', 'verified']);
+        // $this->middleware(function ($request, $next) {
+        //     $this->user = Auth()->user();
+        //     $this->request = $request;
+        //     return $next($request);
+        // });
     }
 
     /**
@@ -111,6 +118,8 @@ class CampaignController extends Controller
             ]);
             }
         }
+
+        Auth()->user()->notify(new CampaignPublished($campaign));
 
         return redirect('dashboard/campaign')->with('success','Campaign telah ditambahkan');
 

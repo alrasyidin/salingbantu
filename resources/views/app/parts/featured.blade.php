@@ -15,7 +15,7 @@
                             </div>
                             <div class="product-thumb">
                                 <figure>
-                                    <img src="{{asset('apps/img/fp01.png')}}" alt="" class="img-fluid">
+                                    <img src="{{asset('sb/img/fp01.png')}}" alt="" class="img-fluid">
                                     <figcaption>
                                         <ul class="list-unstyled">
                                             <li>
@@ -36,7 +36,7 @@
                                 </h3>
                                 <ul class="titlebtm">
                                     <li>
-                                        <img class="auth-img" src="{{asset('apps/img/auth-img.png')}}" alt="author image">
+                                        <img class="auth-img" src="{{asset('sb/img/auth-img.png')}}" alt="author image">
                                         <p>
                                             <a href="#">AazzTech</a>
                                         </p>
@@ -77,7 +77,7 @@
                             </div>
                             <div class="product-thumb">
                                 <figure>
-                                    <img src="{{asset('apps/img/fp02.png')}}" alt="" class="img-fluid">
+                                    <img src="{{asset('sb/img/fp02.png')}}" alt="" class="img-fluid">
                                     <figcaption>
                                         <ul class="list-unstyled">
                                             <li>
@@ -98,7 +98,7 @@
                                 </h3>
                                 <ul class="titlebtm">
                                     <li>
-                                        <img class="auth-img" src="{{asset('apps/img/auth-img.png')}}" alt="author image">
+                                        <img class="auth-img" src="{{asset('sb/img/auth-img.png')}}" alt="author image">
                                         <p>
                                             <a href="#">AazzTech</a>
                                         </p>
@@ -139,7 +139,7 @@
                             </div>
                             <div class="product-thumb">
                                 <figure>
-                                    <img src="{{asset('apps/img/fp01.png')}}" alt="" class="img-fluid">
+                                    <img src="{{asset('sb/img/fp01.png')}}" alt="" class="img-fluid">
                                     <figcaption>
                                         <ul class="list-unstyled">
                                             <li>
@@ -160,7 +160,7 @@
                                 </h3>
                                 <ul class="titlebtm">
                                     <li>
-                                        <img class="auth-img" src="{{asset('img/auth-img.png')}}" alt="author image">
+                                        <img class="auth-img" src="{{asset('sb/img/auth-img.png')}}" alt="author image">
                                         <p>
                                             <a href="#">AazzTech</a>
                                         </p>

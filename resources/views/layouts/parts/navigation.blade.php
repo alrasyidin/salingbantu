@@ -7,7 +7,7 @@
                         <div class="menu-fullwidth">
                             <div class="logo-wrapper">
                                 <div class="logo logo-top">
-                                    <a href="{{url('/')}}"><img src="{{asset('apps/img/logo.png')}}" alt="logo image"
+                                    <a href="{{url('/')}}"><img src="{{asset('img/salingbantu.png')}}" alt="logo image"
                                             class="img-fluid"></a>
                                 </div>
                             </div>
@@ -24,17 +24,23 @@
                                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                             <ul class="navbar-nav">
                                                 <li class="has_dropdown">
-                                                    <a href="index.html">Home</a>
+                                                    <a href="{{url('/')}}">Home</a>
                                                     <div class="dropdown dropdown--menu">
                                                         <ul>
                                                             <li>
-                                                                <a href="index.html">Home Multi Vendor</a>
+                                                                <a href="#">Simple Dropdown</a>
                                                             </li>
                                                         </ul>
                                                     </div>
                                                 </li>
                                                 <li>
-                                                    <a href="contact.html">contact</a>
+                                                    <a href="#">Menu 1</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Menu 2</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Menu 3</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -61,67 +67,7 @@
                                 <div class="author-area">
                                     <div class="author__notification_area">
                                         <ul>
-                                            <li class="has_dropdown">
-                                                <div class="icon_wrap">
-                                                    <span class="icon-bell"></span>
-                                                    <span class="notification_status noti"></span>
-                                                </div>
-                                                <div class="dropdown notification--dropdown">
-                                                    <div class="dropdown_module_header">
-                                                        <h6>My Notifications</h6>
-                                                    </div>
-                                                    <div class="notifications_module">
-                                                        <div class="notification">
-                                                            <div class="notification__info">
-                                                                <div class="info_avatar">
-                                                                    <img src="{{asset('apps/img/notification_head.png')}}"
-                                                                        alt="">
-                                                                </div>
-                                                                <div class="info">
-                                                                    <p>
-                                                                        <span>Anderson</span> added to Favourite
-                                                                        <a href="#">Mccarther Coffee Shop</a>
-                                                                    </p>
-                                                                    <p class="time">Just now</p>
-                                                                </div>
-                                                            </div>
-                                                            <!-- end /.notifications -->
-                                                            <div class="notification__icons ">
-                                                                <span class="icon-heart loved noti_icon"></span>
-                                                            </div>
-                                                            <!-- end /.notifications -->
-                                                        </div>
-                                                        <!-- end /.notifications -->
-                                                        <div class="notification">
-                                                            <div class="notification__info">
-                                                                <div class="info_avatar">
-                                                                    <img src="{{asset('img/notification_head2.png')}}"
-                                                                        alt="">
-                                                                </div>
-                                                                <div class="info">
-                                                                    <p>
-                                                                        <span>Michael</span> commented on
-                                                                        <a href="#">DigiPro Extension Bundle</a>
-                                                                    </p>
-                                                                    <p class="time">Just now</p>
-                                                                </div>
-                                                            </div>
-                                                            <!-- end /.notifications -->
-                                                            <div class="notification__icons ">
-                                                                <span class="icon-bubble commented noti_icon"></span>
-                                                            </div>
-                                                            <!-- end /.notifications -->
-                                                        </div>
-                                                        <!-- end /.notifications -->
-                                                        <div class="text-center m-top-30 p-left-20 p-right-20"><a
-                                                                href="notification.html"
-                                                                class="btn btn-primary btn-md btn-block">View
-                                                                All</a></div>
-                                                        <!-- end /.notifications -->
-                                                    </div>
-                                                    <!-- end /.dropdown -->
-                                                </div>
-                                            </li>
+                                            @include('layouts.parts.notif.notification')
                                             <li class="has_dropdown">
                                                 <div class="icon_wrap">
                                                     <span class="icon-envelope-open"></span>
@@ -176,7 +122,7 @@
                                                         <a href="message.html" class="message">
                                                             <div class="message__actions_avatar">
                                                                 <div class="avatar">
-                                                                    <img src="img/notification_head4.png" alt="">
+                                                                    <img src="{{asset('sb/img/notification_head4.png')}}" alt="">
                                                                 </div>
                                                             </div>
                                                             <!-- end /.actions -->
@@ -250,7 +196,7 @@
                                         <span class="icon-close close_menu"></span>
                                         <div class="author-author__info">
                                             <div class="author__avatar v_middle">
-                                                <img src="img/user-avater.png" alt="user avatar">
+                                                <img src="{{asset('sb/img/user-avater.png')}}" alt="user avatar">
                                             </div>
                                         </div>
                                         <!--end /.author-author__info-->
