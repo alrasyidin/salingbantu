@@ -10,7 +10,7 @@
 
 
     @if (!empty($modal))
-      @include('layouts.admin.parts.modal')
+      @include('admin.layouts.parts.modal')
     @endif
 </body>
 

@@ -6,7 +6,7 @@ Route::group(['prefix' => 'dashboard','middleware' => 'auth','namespace' => 'Das
 
     Route::get('setting', 'SettingProfileController@index')->name('dashboard.setting');
     Route::post('setting', 'SettingProfileController@store')->name('dashboard.setting.store');
-    Route::view('form-changepassword', 'dashboard.setting-account.changepassword');
+    Route::view('form-changepassword', 'app.dashboard.changepassword');
     Route::post('changepassword', 'SettingProfileController@changePassword');
 
     Route::get('campaign', 'CampaignController@index');
