@@ -127,14 +127,16 @@
             </div>
           </a>
         </div>
+
         <div class="dropdown-footer text-center">
           <a href="#">View All <i class="fas fa-chevron-right"></i></a>
         </div>
+        
       </div>
     </li>
     <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
       <img src="{{ !empty(\Auth::user()->avatar) ?  asset("storage/user_photo/60/".\Auth::user()->avatar)  : asset('stisla/assets/img/avatar/avatar-1.png')  }}"  class="rounded-circle mr-1">
-      <div class="d-sm-none d-lg-inline-block">{{\Auth::user()->fullname()}}</div></a>
+      <div class="d-sm-none d-lg-inline-block">{{\Auth::user()->name}}</div></a>
       <div class="dropdown-menu dropdown-menu-right">
         <div class="dropdown-title">Logged in 5 min ago</div>
         <a href="{{url('/'.\Auth::user()->username)}}" class="dropdown-item has-icon">
@@ -153,7 +155,7 @@
 
           <i class="fas fa-sign-out-alt"></i> {{ __('Logout') }}
         </a>
-        
+
         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
             @csrf
         </form>
