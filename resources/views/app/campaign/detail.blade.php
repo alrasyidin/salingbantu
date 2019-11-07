@@ -1,5 +1,7 @@
 @extends('layouts.home')
-@section('title','Single Campaign')
+@section('title')
+{{$campaign->title}}
+@endsection
 @section('content')
 <section class="breadcrumb-area">
     <div class="container">
@@ -22,7 +24,7 @@
                                 @if (!$campaign->images->isEmpty())
                                     @foreach ($campaign->images as $key =>  $image)
                                         <div class="item">
-                                            <img class="d-block w-100" src="{{asset('storage/campaign_images/'.$image->path)}}" height="430" width="750">
+                                            <img class="d-block w-100" src="{{asset('uploads/images/campaign/300/'.$image->path)}}" height="430" width="750">
                                         </div>
                                     @endforeach
                                 @else
@@ -39,7 +41,7 @@
                                 @if (!$campaign->images->isEmpty())
                                     @foreach ($campaign->images as $image)
                                     <button class="owl-thumb-item">
-                                            <img src="{{asset('storage/campaign_images/60/'.$image->path)}}"  height="80" width="80" alt="This is the thumbnail of the item">
+                                            <img src="{{asset('uploads/images/campaign/60/'.$image->path)}}"  height="80" width="80" alt="This is the thumbnail of the item">
                                         </button>
                                     @endforeach
                                 @else
@@ -50,7 +52,7 @@
                                             <img src="{{asset('images/single1.jpg')}}" alt="Keep calm this isn't the end of the world, the preview is just missing." height="80" width="80" >
                                         </button>
                                 @endif
-                                
+
                             </div>
                     <div class="item-preview--excerpt">
 
@@ -64,7 +66,7 @@
                             <h3>
                                 {{str_rp('1000000000')}}
                             </h3>
-                            <p>Terkumpul dari <strong>{{str_rp($campaign->goals)}}</strong> </p> 
+                            <p>Terkumpul dari <strong>{{str_rp($campaign->goals)}}</strong> </p>
                         </div>
                         <div class="purchase-button">
                             <a href="{{url('/campaign').'/'.$campaign->slug.'/contribute'}}" class="btn btn--lg btn-primary">Donasi Sekarang</a>
@@ -78,7 +80,7 @@
                             <div class="author-infos">
                                 <div class="author-top">
                                     <div class="author_avatar">
-                                        <img src="{{asset("storage/user_photo/60/".$campaign->user->avatar)}}" alt="Presenting the broken author avatar :D">
+                                        <img src="{{asset("uploads/images/avatar/60/".$campaign->user->avatar)}}" alt="Presenting the broken author avatar :D">
                                     </div>
                                     <div class="author">
                                         <h5>{{$campaign->user->fullname()}}</h5>
@@ -111,7 +113,7 @@
                                     </li>
                                 </ul>
                             </div><!-- Ends: .social-share-card -->
-        
+
                 </aside><!-- ends: .sidebar -->
             </div><!-- ends: .col-md-4 -->
         </div><!-- ends: .row -->
@@ -152,7 +154,7 @@
                                         <div class="media">
                                             <div class="media-left">
                                                 <a href="#">
-                                                    <img class="media-object" src="img/m2.png" alt="Commentator Avatar">
+                                                    <img class="media-object" src="{{asset('sb/img/m2.png')}}" alt="Commentator Avatar">
                                                 </a>
                                             </div>
                                             <div class="media-body">
@@ -177,7 +179,7 @@
                                         <div class="media">
                                             <div class="media-left">
                                                 <a href="#">
-                                                    <img class="media-object" src="{{asset('apps/img/m2.png')}}" alt="Commentator Avatar">
+                                                    <img class="media-object" src="{{asset('sb/img/m2.png')}}" alt="Commentator Avatar">
                                                 </a>
                                             </div>
                                             <div class="media-body">
@@ -233,7 +235,7 @@
                             <h4>Donatur</h4>
                         </div>
                         <ul class="infos">
-                            
+
                         </ul><!-- ends: .infos -->
                     </div><!-- ends: .card--product-infos -->
                 </aside><!-- ends: .sidebar -->
@@ -294,7 +296,7 @@
         z-index: 5;
         text-align: center;
     }
-    
+
     body .owl-nav div{
         position: absolute;
         top: 40%;
@@ -315,7 +317,7 @@
     body .owl-prev i, body .owl-next i{
         margin: auto;
     }
-    
+
 </style>
 @endsection
 
