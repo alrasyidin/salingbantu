@@ -136,7 +136,7 @@
                                     <div class="product-single latest-single">
                                         <div class="product-thumb">
                                             <figure>
-                                                <img src="{{asset("storage/campaign_images/300/".$campaign->images[0]['path'])}}" alt="" class="img-fluid">
+                                                <img src="{{asset("uploads/images/campaign/300/".$campaign->images[0]['path'])}}" alt="" class="img-fluid">
                                                 <figcaption>
                                                     <ul class="list-unstyled">
                                                         <li><a href="{{url('campaign/'.$campaign->slug)}}">Detail Campaign</a></li>
@@ -151,7 +151,7 @@
                                             </h5>
                                             <ul class="titlebtm">
                                                 <li>
-                                                    <img class="auth-img" src="{{asset("storage/user_photo/60/".$campaign->user->avatar)}}" alt="author image">
+                                                    <img class="auth-img" src="{{asset("uploads/images/avatar/60/".$campaign->user->avatar)}}" alt="author image">
                                                     <p><a href="#">{{$campaign->user->fullname()}}</a></p>
                                                 </li>
                                             </ul>

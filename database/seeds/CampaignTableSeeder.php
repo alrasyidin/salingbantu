@@ -18,12 +18,12 @@ class CampaignTableSeeder extends Seeder
         for($i = 0; $i < 30; $i++){
             $user = $faker->randomElement($users);
             App\Models\Campaign::create([
-                'title' => "Example campaign saling bantu ".$i,
+                'title' => $faker->sentence($nbWords = 6, $variableNbWords = true),
                 'user_id' => $user['id'],
                 'goals' => $faker->numberBetween(10000, 100000000),
-                'slug' => str_slug($faker->name),
+                'slug' => $faker->slug(),
                 'endof_campaign' => date("Y/m/d",mktime(0, 0, 0, date('m'), date('d') + 30, date('Y'))),
-                'description' => $faker->randomHtml(2,3),
+                'description' => $faker->text($maxNbChars = 300),
                 'status' => 'published'
             ]);
         }

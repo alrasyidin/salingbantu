@@ -16,11 +16,11 @@
     <div id="app">
         <div class="main-wrapper">
             {{-- start navbar  --}}
-            @include('layouts.admin.parts.navbar')
+            @include('admin.layouts.parts.navbar')
             {{-- end navbar --}}
 
             {{--  start sidebar --}}
-            @include('layouts.admin.parts.sidebar')
+            @include('admin.layouts.parts.sidebar')
             {{-- end main sidebar  --}}
 
             <!-- Main Content -->
@@ -29,14 +29,14 @@
             </div>
 
             {{-- start footer --}}
-            @include('layouts.admin.parts.footer')
+            @include('admin.layouts.parts.footer')
             {{-- end of footer --}}
         </div>
     </div>
 
 
     @if (!empty($modal))
-      @include('layouts.admin.parts.modal')
+      @include('admin.layouts.parts.modal')
     @endif
 
     <!-- General JS Scripts -->

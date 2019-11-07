@@ -124,8 +124,10 @@
 @endsection
 @section('customjs')
 <script src="{{asset('stisla/assets/modules/summernote/summernote-bs4.min.js')}}"></script>
+<script src="{{asset('js/bs-custom-file-input.js')}}"></script>
 <script>
     $(document).ready(function () {
+        bsCustomFileInput.init()
         $("#payment_note").summernote({
             dialogsInBody: true,
             minHeight: 150,
